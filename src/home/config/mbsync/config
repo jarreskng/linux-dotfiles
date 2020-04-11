@@ -1,0 +1,96 @@
+#-----------------------------------------------------------------------
+#                         common settings
+#-----------------------------------------------------------------------
+
+SyncState	/home/jarres/mailbox/.mbsync/
+Create		Slave
+
+#-----------------------------------------------------------------------
+#                         gmail account
+#-----------------------------------------------------------------------
+
+IMAPAccount	gmail
+Host		imap.gmail.com
+User		mtitov.work@gmail.com
+SSLType		IMAPS
+PassCmd		"gpg2 --quiet --for-your-eyes-only --no-tty --decrypt /home/jarres/passwords/mail/gmail/public/pass.gpg"
+
+
+IMAPStore	gmail-remote
+Account		gmail
+
+MaildirStore	gmail-local
+SubFolders	Verbatim
+Path		/home/jarres/mailbox/gmail
+
+Channel		gmail-inbox
+Master		:gmail-remote:"INBOX"
+Slave		:gmail-local:inbox
+
+Channel		gmail-sent
+Master		:gmail-remote:"[Gmail]/Sent Mail"
+Slave		:gmail-local:sent
+
+Channel		gmail-draft
+Master		:gmail-remote:"[Gmail]/Drafts"
+Slave		:gmail-local:draft
+
+Channel		gmail-spam
+Master		:gmail-remote:"[Gmail]/Spam"
+Slave		:gmail-local:spam
+
+Channel		gmail-trash
+Master		:gmail-remote:"[Gmail]/Bin"
+Slave		:gmail-local:trash
+
+Group		gmail
+Channel		gmail-inbox
+Channel		gmail-sent
+Channel		gmail-draft
+Channel		gmail-spam
+Channel		gmail-trash
+
+#-----------------------------------------------------------------------
+#                         cognitive account
+#-----------------------------------------------------------------------
+
+IMAPAccount	cognitive
+Host		mail.cognitive.ru
+User		m.titov@cognitive.ru
+SSLType		IMAPS
+PassCmd		"gpg2 --quiet --for-your-eyes-only --no-tty --decrypt /home/jarres/passwords/work/mail/pass.gpg"
+
+
+IMAPStore	cognitive-remote
+Account		cognitive
+
+MaildirStore	cognitive-local
+SubFolders	Verbatim
+Path		/home/jarres/passwords/cognitive
+
+Channel		cognitive-inbox
+Master		:cognitive-remote:"INBOX"
+Slave		:cognitive-local:inbox
+
+Channel		cognitive-sent
+Master		:cognitive-remote:"Sent"
+Slave		:cognitive-local:sent
+
+Channel		cognitive-draft
+Master		:cognitive-remote:"Drafts"
+Slave		:cognitive-local:draft
+
+Channel		cognitive-spam
+Master		:cognitive-remote:"Spam"
+Slave		:cognitive-local:spam
+
+Channel		cognitive-trash
+Master		:cognitive-remote:"Trash"
+Slave		:cognitive-local:trash
+
+Group		cognitive
+Channel		cognitive-inbox
+Channel		cognitive-sent
+Channel		cognitive-draft
+Channel		cognitive-spam
+Channel		cognitive-trash

@@ -1,0 +1,41 @@
+[directory]
+ncmpcpp_directory = "/home/jarres/config/ncmpcpp"
+lyrics_directory  = "/home/jarres/config/ncmpcpp/lyrics"
+
+[mpd]
+mpd_music_dir = "/media/storage/music"
+mpd_host = "localhost"
+mpd_port = "6600"
+mpd_crossfade_time = "5"
+mpd_connection_timeout = "5"
+
+[visualizer]
+visualizer_fifo_path = "/tmp/mpd.fifo"
+visualizer_output_name = "visualizer feed"
+visualizer_in_stereo = "yes"
+visualizer_sync_interval = "30"
+visualizer_type = "spectrum"
+visualizer_look = "●▮"
+visualizer_color = "blue,green,yellow,red"
+
+[encoding]
+system_encoding = ""
+
+[delays]
+playlist_disable_highlight_delay = "5"
+message_delay_time = "5"
+
+[header]
+header_visibility = "yes"
+header_window_color = "default"
+volume_color = "default"
+
+[playlist]
+playlist_display_mode = "classic"
+
+[global]
+colors_enabled = "yes"
+main_window_color = "default"
+centered_cursor = "yes"
+enable_window_title = "yes"
+external_editor = "emacs"

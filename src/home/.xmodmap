@@ -1,0 +1,31 @@
+! clear control, alt and super modifiers
+clear mod1
+clear mod4
+clear control
+
+! assign left control to left alt
+keycode  37 = Alt_L ISO_Next_Group Alt_L ISO_Next_Group
+
+! assign left alt to left control
+keycode  64 = Control_L NoSymbol Control_L
+
+! assign right control to right alt
+keycode 105 = Alt_R ISO_Next_Group Alt_R ISO_Next_Group
+
+! assign right alt to right control
+keycode 108 = Control_R NoSymbol Control_R
+
+! assign left win to left super
+keycode 133 = Super_L NoSymbol Super_L
+
+! assign right win to right super
+keycode 135 = Super_R NoSymbol Super_R
+
+! assign left and right control keys to control modifier
+add Control = Control_L Control_R
+
+! assign left and right alt keys to mod1 modifier
+add mod1 = Alt_L Alt_R
+
+! assign left and right super keys to mod4 modifier
+add mod4 = Super_L Super_R

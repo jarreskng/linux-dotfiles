@@ -1,0 +1,16 @@
+[database]
+path=/home/jarres/mailbox
+
+[user]
+name=Mikhail Titov
+primary_email=jarreskng@gmail.com
+
+[new]
+tags=new;
+ignore=
+
+[search]
+exclude_tags=deleted;spam;
+
+[maildir]
+synchronize_flags=true

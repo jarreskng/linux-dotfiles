@@ -1,0 +1,6 @@
+Server = http://mirror.metalgamer.eu/archlinux/$repo/os/$arch
+Server = http://archlinux.uib.no/$repo/os/$arch
+Server = http://arch.eckner.net/archlinux/$repo/os/$arch
+Server = http://mirror.fra10.de.leaseweb.net/archlinux/$repo/os/$arch
+Server = http://ftp.uni-kl.de/pub/linux/archlinux/$repo/os/$arch
+Server = http://arch.softver.org.mk/archlinux/$repo/os/$arch

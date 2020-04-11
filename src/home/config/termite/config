@@ -1,0 +1,45 @@
+# vim: ft=dosini cms=#%s
+
+[options]
+
+audible_bell        = false
+urgent_on_bell      = true
+bold_is_bright      = true
+clickable_url       = true
+cursor_blink        = on
+cursor_shape        = block
+scrollback_lines    = 2000
+scrollbar           = off
+scroll_on_keystroke = true
+scroll_on_output    = true
+search_wrap         = true
+font                = Noto Sans Mono Semibold 11
+
+[colors]
+
+background = #2e3436
+foreground = #babdb6
+
+color0  = #2e3436
+color8  = #6e706b
+
+color1  = #cc0000
+color9  = #ef2929
+
+color2  = #4e9a06
+color10 = #8ae234
+
+color3  = #edd400
+color11 = #fce94f
+
+color4  = #3465a4
+color12 = #729fcf
+
+color5  = #92659a
+color13 = #c19fbe
+
+color6  = #07c7ca
+color14 = #63e9e9
+
+color7  = #d3d7cf
+color15 = #eeeeec

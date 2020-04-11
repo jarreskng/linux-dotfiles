@@ -1,0 +1,46 @@
+#-----------------------------------------------------------------------
+#                         base directories
+#-----------------------------------------------------------------------
+
+XDG_CONFIG_HOME			DEFAULT="@{HOME}/config"
+XDG_DATA_HOME			DEFAULT="@{HOME}/share"
+XDG_CACHE_HOME			DEFAULT="/tmp/user/@{PAM_USER}/cache"
+
+#-----------------------------------------------------------------------
+#                         default applications
+#-----------------------------------------------------------------------
+
+EDITOR				DEFAULT="emacs"
+PAGER				DEFAULT="less"
+BROWSER				DEFAULT="chromium"
+
+#-----------------------------------------------------------------------
+#                         zsh workaround
+#-----------------------------------------------------------------------
+
+ZDOTDIR				DEFAULT="@{HOME}/config/zsh"
+
+#-----------------------------------------------------------------------
+#			  xdg compatibility
+#-----------------------------------------------------------------------
+
+PASSWORD_STORE_DIR		DEFAULT="@{HOME}/passwords"
+MAILBOX_STORE_DIR		DEFAULT="@{HOME}/mailbox"
+ANSIBLE_CONFIG			DEFAULT="@{HOME}/config/ansible/config"
+GNUPGHOME			DEFAULT="@{HOME}/config/gnupg"
+NOTMUCH_CONFIG			DEFAULT="@{HOME}/config/notmuch/config"
+WGETRC				DEFAULT="@{HOME}/config/wget/config"
+LESSKEY				DEFAULT="@{HOME}/config/less/lesskey"
+LESSHISTFILE			DEFAULT="@{HOME}/share/less/history"
+DOCKER_CONFIG			DEFAULT="@{HOME}/config/docker"
+NPM_CONFIG_USERCONFIG		DEFAULT="@{HOME}/config/npm/npmrc"
+WEBIDE_PROPERTIES		DEFAULT="@{HOME}/config/jetbrains/webstorm.properties"
+RIDER_PROPERTIES		DEFAULT="@{HOME}/config/jetbrains/rider.properties"
+DATAGRIP_PROPERTIES		DEFAULT="@{HOME}/config/jetbrains/datagrip.properties"
+NVM_DIR				DEFAULT="@{HOME}/config/nvm"
+NUGET_PACKAGES			DEFAULT="@{HOME}/share/nuget/packages"
+PATH				DEFAULT="${PATH}:@{HOME}/.dotnet/tools"
+NODE_OPTIONS			DEFAULT="--max_old_space_size=8192"
+MSBuildSDKsPath			DEFAULT="/opt/dotnet/sdk/$(dotnet --version)/Sdks"
+_JAVA_AWT_WM_NONREPARENTING	DEFAULT="1"
+_JAVA_OPTIONS			DEFAULT="-Duser.share=@{HOME}/share -Djava.util.prefs.userRoot=@{HOME}/share/java"

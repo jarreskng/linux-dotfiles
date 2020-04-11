@@ -1,0 +1,33 @@
+* {
+    border: none;
+    border-radius: 0;
+
+    box-shadow: none;
+    text-shadow: none;
+    
+    font-size: 15px;
+    font-family: Noto Sans Mono Semibold;
+}
+
+window {
+    background: #2e3436;
+    color: #babdb6;
+}
+
+#workspaces button {
+    color: #babdb6;
+    background: #2e3436;
+}
+
+#workspaces button.focused {
+    color: #babdb6;
+    background: #4b4e4f;
+}
+
+#pulseaudio.muted {
+	opacity: 0.5;	
+}
+
+#pulseaudio, #custom-notmuch {
+    margin-right: 10px;
+}

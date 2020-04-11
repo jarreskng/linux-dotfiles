@@ -1,0 +1,14 @@
+# /dev/sdb1
+UUID=e188c771-5797-41f5-83c2-c0608121b6a5	/mnt/storage	ext4		rw,relatime	0 2
+
+# /dev/mapper/vg-root LABEL=root
+UUID=10532dde-34fd-4b3d-a447-d0498fb964d2	/         	ext4      	rw,relatime	0 1
+
+# /dev/mapper/vg-home LABEL=home
+UUID=78f2b231-46a3-4337-829e-6c8be22f2218	/home     	ext4      	rw,relatime	0 2
+
+# /dev/mapper/vg-docker LABEL=docker
+UUID=4cfb5d5f-8712-4a82-a318-1a102eed54f0	/docker     	ext4      	rw,relatime	0 2
+
+# /dev/sda1
+UUID=4100-E23D					/boot     	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,utf8,errors=remount-ro	0 2

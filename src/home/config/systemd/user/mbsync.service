@@ -1,0 +1,15 @@
+[Unit]
+Description=mbsync service (oneshot)
+Documentation=man:mbsync(1)
+
+[Service]
+Type=oneshot
+TimeoutStopSec=60
+ExecStart=/usr/bin/mbsync --all --quiet --config %h/config/mbsync/config
+ExecStartPost=/usr/bin/notmuch new
+Environment="GNUPGHOME=%h/config/gnupg"
+Environment="PASSWORD_STORE_DIR=%h/passwords"
+Environment="NOTMUCH_CONFIG=%h/config/notmuch/config"
+
+[Install]
+WantedBy=default.target

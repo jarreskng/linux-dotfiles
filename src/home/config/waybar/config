@@ -1,0 +1,37 @@
+{
+    "layer": "bottop",
+    "position": "top",
+
+    "modules-left": [ "sway/workspaces" ],
+    "modules-center": [ "clock" ],
+    "modules-right": [ "custom/notmuch", "pulseaudio" ],
+
+    "sway/workspaces": {
+        "format": "{name}",
+    	"all-outputs": false,
+        "disable-scroll": true,
+		"tooltip": false
+    },
+
+    "clock": {
+    	"format": "{:%a %d %b %H:%M}",
+    	"interval": 60,
+        "tooltip": false
+    },
+
+    "pulseaudio": {
+        "format": " {volume}%",
+    	"scroll-step": 5,
+    	"on-click": "pactl set-sink-mute 0 toggle",
+		"tooltip": false
+    },
+
+    "custom/notmuch": {
+       "format": " {}",
+       "interval": 60,
+       "exec": "notmuch count -- tag:unread",
+       "exec-if": "notmuch count -- tag:unread",
+       "tooltip": false
+    }
+
+}

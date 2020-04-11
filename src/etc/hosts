@@ -1,0 +1,8 @@
+127.0.0.1         localhost
+::1               localhost
+127.0.1.1         wormhole.localdomain    wormhole
+
+192.168.0.211 	  registry.etp
+10.120.110.10 	  gitlab.arch
+10.120.110.60 	  teamcity.arch
+10.120.110.50 	  registry.bidzaar.arch
