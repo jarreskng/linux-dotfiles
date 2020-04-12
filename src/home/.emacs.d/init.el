@@ -1,9 +1,3 @@
-;(add-to-list 'load-path (expand-file-name "config/settings" user-emacs-directory))
-;(add-to-list 'load-path (expand-file-name "config/modules" user-emacs-directory))
-
-;(require 'settings)
-;(require 'modules)
-
 (defconst emacs-data-dir
   (or
    (getenv "EMACS_DATA_HOME")
@@ -50,6 +44,7 @@
 (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/"))
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 (add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/"))
+(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/"))
 
 (setq package-gnupghome-dir emacs-gnupg-dir)
 (setq package-user-dir (expand-file-name "elpa" emacs-data-dir))
@@ -81,17 +76,22 @@
   :ensure t
   :init (load-theme 'doom-nord t))
 
-
-
 (use-package yaml-mode
   :ensure t
   :mode ("\\.yml$" . yaml-mode))
 
-
-
 (use-package org
   :ensure t
   :mode ("\\.org\\'" . org-mode))
+
+(use-package markdown-mode
+  :ensure t
+  :commands (markdown-mode gfm-mode)
+  :mode (("\\.md\\'" . markdown-mode)
+	 ("\\.markdown\\'" . markdown-mode))
+  :init (setq markdown-command "multimarkdown"))
+
+
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -99,6 +99,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages (quote (doom-themes auto-compile use-package))))
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
