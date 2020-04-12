@@ -89,7 +89,7 @@
   :commands (markdown-mode gfm-mode)
   :mode (("\\.md\\'" . markdown-mode)
 	 ("\\.markdown\\'" . markdown-mode))
-  :init (setq markdown-command "multimarkdown"))
+  :init (setq markdown-command "pandoc"))
 
 
 
