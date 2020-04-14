@@ -86,6 +86,7 @@ esac
 #                         aliases
 #-----------------------------------------------------------------------
 
+alias emacs="emacsclient"
 alias em="emacsclient"
 
 alias cp="nocorrect cp --verbose --preserve=all"

@@ -1,3 +1,6 @@
+(setq user-init-file (or load-file-name (buffer-file-name)))
+(setq user-emacs-directory (file-name-directory user-init-file))
+
 (defconst emacs-data-dir
   (or
    (getenv "EMACS_DATA_HOME")
