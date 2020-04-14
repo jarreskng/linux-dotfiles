@@ -19,11 +19,16 @@ window {
 #workspaces button {
     color: #babdb6;
     background: #2e3436;
+    padding: 5px 15px;
 }
 
 #workspaces button.focused {
     color: #babdb6;
     background: #4b4e4f;
+}
+
+#workspaces button.urgent {
+    color: #fce94f;
 }
 
 #pulseaudio.muted {
