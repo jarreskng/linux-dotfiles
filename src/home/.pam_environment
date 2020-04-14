@@ -10,7 +10,7 @@ XDG_CACHE_HOME			DEFAULT="/tmp/user/@{PAM_USER}/cache"
 #                         default applications
 #-----------------------------------------------------------------------
 
-EDITOR				DEFAULT="emacs"
+EDITOR				DEFAULT="emacsclient"
 PAGER				DEFAULT="less"
 BROWSER				DEFAULT="chromium"
 
