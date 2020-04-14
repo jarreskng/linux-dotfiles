@@ -13,7 +13,7 @@ scrollbar           = off
 scroll_on_keystroke = true
 scroll_on_output    = true
 search_wrap         = true
-font                = Noto Sans Mono Semibold 11
+font                = JetBrains Mono Medium 10
 
 [colors]
 
