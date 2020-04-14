@@ -10,7 +10,7 @@
         "format": "{name}",
     	"all-outputs": false,
         "disable-scroll": true,
-		"tooltip": false
+	"tooltip": false
     },
 
     "clock": {
@@ -23,7 +23,7 @@
         "format": " {volume}%",
     	"scroll-step": 5,
     	"on-click": "pactl set-sink-mute 0 toggle",
-		"tooltip": false
+	"tooltip": false
     },
 
     "custom/notmuch": {

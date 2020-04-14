@@ -1,12 +1,14 @@
 * {
+    min-height: 0;
+    
     border: none;
     border-radius: 0;
 
     box-shadow: none;
     text-shadow: none;
     
-    font-size: 15px;
-    font-family: Noto Sans Mono Semibold;
+    font-size: 14px;
+    font-family: JetBrains Mono Medium;
 }
 
 window {
@@ -25,7 +27,7 @@ window {
 }
 
 #pulseaudio.muted {
-	opacity: 0.5;	
+    opacity: 0.5;
 }
 
 #pulseaudio, #custom-notmuch {
