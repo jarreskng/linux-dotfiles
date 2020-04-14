@@ -1,1 +1,2 @@
-registry=http://10.120.110.50:4873
+cache=${XDG_DATA_HOME}/npm
+registry=https://registry.npmjs.org/
