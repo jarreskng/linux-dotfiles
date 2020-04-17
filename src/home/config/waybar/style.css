@@ -42,3 +42,7 @@ window {
 #pulseaudio, #custom-notmuch {
     margin-right: 10px;
 }
+
+#custom-notmuch {
+    color: #fce94f;
+}
