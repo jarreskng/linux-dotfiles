@@ -1,37 +1,53 @@
 {
-    "layer": "bottop",
     "position": "top",
+    "layer": "bottop",
 
-    "modules-left": [ "sway/workspaces" ],
-    "modules-center": [ "clock" ],
-    "modules-right": [ "custom/notmuch", "pulseaudio" ],
+    "modules-left": [
+	"sway/workspaces",
+	"sway/mode"
+    ],
+    
+    "modules-center": [
+	"clock"
+    ],
+
+    "modules-right": [
+	"custom/notmuch",
+	"pulseaudio"
+    ],
 
     "sway/workspaces": {
-        "format": "{name}",
-    	"all-outputs": false,
-        "disable-scroll": true,
-	"tooltip": false
+	"format": "{name}",
+	"tooltip": false,
+	"all-outputs": false,
+	"disable-scroll": true
     },
 
+    "sway/mode": {
+	"format": "[{}]",
+	"tooltip": false,
+	"max-length": 24
+    },
+    
     "clock": {
-    	"format": "{:%a %d %b %H:%M}",
-    	"interval": 60,
-        "tooltip": false
+	"format": "{:%a %d %b %H:%M}",
+	"tooltip": false,
+	"interval": 60
     },
-
+    
     "pulseaudio": {
-        "format": " {volume}%",
-    	"scroll-step": 5,
-    	"on-click": "pactl set-sink-mute 0 toggle",
-	"tooltip": false
+	"format": " {volume}%",
+	"tooltip": false,
+	"scroll-step": 5,
+	"on-click": "pactl set-sink-mute 0 toggle"
     },
-
+    
     "custom/notmuch": {
-       "format": " {}",
-       "interval": 60,
-       "exec": "notmuch count -- tag:unread",
-       "exec-if": "notmuch count -- tag:unread",
-       "tooltip": false
+	"format": " {}",
+	"tooltip": false,
+	"interval": 60,
+	"exec": "notmuch count -- tag:unread",
+	"exec-if": "notmuch count -- tag:unread"
     }
 
 }

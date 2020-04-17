@@ -12,8 +12,8 @@
 }
 
 window {
-    background: #2e3436;
     color: #babdb6;
+    background: #2e3436;
 }
 
 #workspaces button {
@@ -28,6 +28,10 @@ window {
 }
 
 #workspaces button.urgent {
+    color: #fce94f;
+}
+
+#mode {
     color: #fce94f;
 }
 
