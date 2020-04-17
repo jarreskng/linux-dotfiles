@@ -24,10 +24,3 @@ ensure_dir "${PASSWORD_STORE_DIR}"
 ensure_dir "${XDG_DATA_HOME}/zsh"
 ensure_dir "${XDG_DATA_HOME}/less"
 
-#-----------------------------------------------------------------------
-#			  autostart
-#-----------------------------------------------------------------------
-
-if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
-  exec sway
-fi
