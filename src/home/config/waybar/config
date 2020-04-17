@@ -43,10 +43,9 @@
     },
     
     "custom/notmuch": {
-	"format": " {}",
+	"format": " ",
 	"tooltip": false,
 	"interval": 60,
-	"exec": "notmuch count -- tag:unread",
 	"exec-if": "notmuch count -- tag:unread"
     }
 
