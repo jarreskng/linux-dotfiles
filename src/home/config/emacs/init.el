@@ -81,7 +81,11 @@
 
 (use-package yaml-mode
   :ensure t
-  :mode ("\\.yml$" . yaml-mode))
+  :mode ("\\.yml\\'" . yaml-mode))
+
+(use-package json-mode
+  :ensure t
+  :mode ("\\.json\\'" . json-mode))
 
 (use-package org
   :ensure t
@@ -94,14 +98,16 @@
 	 ("\\.markdown\\'" . markdown-mode))
   :init (setq markdown-command "pandoc"))
 
-
+(use-package notmuch
+  :ensure t
+  :init (setq notmuch-search-oldest-first nil))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (doom-themes auto-compile use-package))))
+ '(package-selected-packages (quote (notmuch auto-compile use-package))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
