@@ -8,6 +8,4 @@
 (setq auto-save-timeout 20)
 (setq auto-save-interval 250)
 
-
-
 (provide 'config-autosave)

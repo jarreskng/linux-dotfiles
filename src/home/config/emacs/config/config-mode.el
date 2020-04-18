@@ -17,6 +17,4 @@
 	 ("\\.markdown\\'" . markdown-mode))
   :init (setq markdown-command "pandoc"))
 
-
-
 (provide 'config-mode)

@@ -11,6 +11,4 @@
 (setq kept-new-versions 8)
 (setq delete-old-versions t)
 
-
-
 (provide 'config-backups)

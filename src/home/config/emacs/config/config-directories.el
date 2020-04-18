@@ -13,6 +13,4 @@
    (getenv "GNUPGHOME")
    (expand-file-name "gnupg" (getenv "XDG_CONFIG_HOME"))))
 
-
-
 (provide 'config-directories)

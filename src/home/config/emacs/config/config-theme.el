@@ -10,6 +10,4 @@
   :ensure t
   :init (load-theme 'doom-nord t))
 
-
-
 (provide 'config-theme)

@@ -20,6 +20,4 @@
 
 (require 'use-package)
 
-
-
 (provide 'config-packages)
