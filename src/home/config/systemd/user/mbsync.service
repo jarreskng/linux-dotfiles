@@ -6,8 +6,9 @@ Documentation=man:mbsync(1)
 Type=oneshot
 TimeoutStopSec=60
 
-ExecStartPre=mkdir -p %h/mailbox/gmail && mkdir -p %h/mailbox/cognitive
 ExecStart=/usr/bin/mbsync --all --quiet --config %h/config/mbsync/config
+ExecStartPre=mkdir -p %h/mailbox/cognitive
+ExecStartPre=mkdir -p %h/mailbox/gmail
 ExecStartPost=/usr/bin/notmuch new
 
 Environment="PASSWORD_STORE_DIR=%h/passwords"
