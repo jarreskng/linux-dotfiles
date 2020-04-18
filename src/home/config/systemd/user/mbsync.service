@@ -5,10 +5,13 @@ Documentation=man:mbsync(1)
 [Service]
 Type=oneshot
 TimeoutStopSec=60
+
+ExecStartPre=mkdir -p %h/mailbox/gmail && mkdir -p %h/mailbox/cognitive
 ExecStart=/usr/bin/mbsync --all --quiet --config %h/config/mbsync/config
 ExecStartPost=/usr/bin/notmuch new
-Environment="GNUPGHOME=%h/config/gnupg"
+
 Environment="PASSWORD_STORE_DIR=%h/passwords"
+Environment="GNUPGHOME=%h/config/gnupg"
 Environment="NOTMUCH_CONFIG=%h/config/notmuch/config"
 
 [Install]

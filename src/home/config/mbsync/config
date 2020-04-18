@@ -3,7 +3,8 @@
 #-----------------------------------------------------------------------
 
 SyncState	/home/jarres/mailbox/.mbsync/
-Create		Slave
+Sync		pull
+Create		slave
 
 #-----------------------------------------------------------------------
 #                         gmail account
@@ -11,17 +12,17 @@ Create		Slave
 
 IMAPAccount	gmail
 Host		imap.gmail.com
-User		mtitov.work@gmail.com
+User		jarreskng@gmail.com
 SSLType		IMAPS
-PassCmd		"gpg2 --quiet --for-your-eyes-only --no-tty --decrypt /home/jarres/passwords/mail/gmail/public/pass.gpg"
-
+PassCmd		"gpg2 --quiet --for-your-eyes-only --no-tty --decrypt /home/jarres/passwords/mail/gmail/jarreskng/appcode.gpg"
 
 IMAPStore	gmail-remote
 Account		gmail
 
 MaildirStore	gmail-local
 SubFolders	Verbatim
-Path		/home/jarres/mailbox/gmail
+Path		/home/jarres/mailbox/gmail/
+Inbox		/home/jarres/mailbox/gmail/inbox
 
 Channel		gmail-inbox
 Master		:gmail-remote:"INBOX"
@@ -31,22 +32,22 @@ Channel		gmail-sent
 Master		:gmail-remote:"[Gmail]/Sent Mail"
 Slave		:gmail-local:sent
 
-Channel		gmail-draft
+Channel		gmail-drafts
 Master		:gmail-remote:"[Gmail]/Drafts"
-Slave		:gmail-local:draft
+Slave		:gmail-local:drafts
 
 Channel		gmail-spam
 Master		:gmail-remote:"[Gmail]/Spam"
 Slave		:gmail-local:spam
 
 Channel		gmail-trash
-Master		:gmail-remote:"[Gmail]/Bin"
+Master		:gmail-remote:"[Gmail]/Trash"
 Slave		:gmail-local:trash
 
 Group		gmail
 Channel		gmail-inbox
 Channel		gmail-sent
-Channel		gmail-draft
+Channel		gmail-drafts
 Channel		gmail-spam
 Channel		gmail-trash
 
@@ -58,15 +59,15 @@ IMAPAccount	cognitive
 Host		mail.cognitive.ru
 User		m.titov@cognitive.ru
 SSLType		IMAPS
-PassCmd		"gpg2 --quiet --for-your-eyes-only --no-tty --decrypt /home/jarres/passwords/work/mail/pass.gpg"
-
+PassCmd		"gpg2 --quiet --for-your-eyes-only --no-tty --decrypt /home/jarres/passwords/cognitive/mail/pass.gpg"
 
 IMAPStore	cognitive-remote
 Account		cognitive
 
 MaildirStore	cognitive-local
 SubFolders	Verbatim
-Path		/home/jarres/passwords/cognitive
+Path		/home/jarres/mailbox/cognitive/
+Inbox		/home/jarres/mailbox/cognitive/inbox
 
 Channel		cognitive-inbox
 Master		:cognitive-remote:"INBOX"
@@ -76,9 +77,9 @@ Channel		cognitive-sent
 Master		:cognitive-remote:"Sent"
 Slave		:cognitive-local:sent
 
-Channel		cognitive-draft
+Channel		cognitive-drafts
 Master		:cognitive-remote:"Drafts"
-Slave		:cognitive-local:draft
+Slave		:cognitive-local:drafts
 
 Channel		cognitive-spam
 Master		:cognitive-remote:"Spam"
@@ -91,6 +92,7 @@ Slave		:cognitive-local:trash
 Group		cognitive
 Channel		cognitive-inbox
 Channel		cognitive-sent
-Channel		cognitive-draft
+Channel		cognitive-drafts
 Channel		cognitive-spam
 Channel		cognitive-trash
+

@@ -1,0 +1,4 @@
+#!/bin/sh
+
+notmuch tag +cognitive -- path:"cognitive/**"
+notmuch tag +gmail     -- path:"gmail/**"
