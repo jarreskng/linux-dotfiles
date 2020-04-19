@@ -1,72 +1,9 @@
+
+# THIS IS A GENERATED FILE.
+# DO NOT EDIT MANUALY.
+# ALL CHANGES WILL BE OVERWRITTEN.
 #-----------------------------------------------------------------------
-#                         modifiers
-#-----------------------------------------------------------------------
-
-set $mod Mod4
-set $alt Mod1
-
-#-----------------------------------------------------------------------
-#                         bindings
-#-----------------------------------------------------------------------
-
-floating_modifier $mod
-
-bindsym $mod+Return exec termite
-bindsym $mod+w exec chromium
-bindsym $mod+d exec rofi -show run -cache-dir=${XDG_DATA_DIR}/rofi
-
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
-
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
-
-bindsym $mod+p workspace prev
-bindsym $mod+n workspace next
-
-bindsym $mod+v split toggle
-bindsym $mod+t layout toggle all
-
-bindsym $mod+q kill
-bindsym $mod+f fullscreen toggle
-bindsym $mod+space floating toggle
-
-bindsym $mod+Shift+r restart
-bindsym $mod+Shift+e exit
-bindsym $mod+Shift+c reload
-
-#-----------------------------------------------------------------------
-#                         modes
-#-----------------------------------------------------------------------
-
-bindsym $mod+r mode "resize"
-bindsym $mod+s mode "system"
-
-mode "resize" {
-     bindsym h resize shrink width 10
-     bindsym j resize grow height 10
-     bindsym k resize shrink height 10
-     bindsym l resize grow width 10
-
-     bindsym Return mode "default"
-     bindsym Escape mode "default"
-}
-
-mode "system" {
-     bindsym c reload
-     bindsym e exit
-     bindsym r restart
-
-     bindsym Return mode "default"
-     bindsym Escape mode "default"
-}
-
-#-----------------------------------------------------------------------
-#                         displays
+#			displays
 #-----------------------------------------------------------------------
 
 set $display_01 DisplayPort-0
@@ -127,6 +64,75 @@ bindsym $mod+Shift+7 move container to workspace $workspace_07
 bindsym $mod+Shift+8 move container to workspace $workspace_08
 bindsym $mod+Shift+9 move container to workspace $workspace_09
 bindsym $mod+Shift+0 move container to workspace $workspace_10
+#-----------------------------------------------------------------------
+#			modifiers
+#-----------------------------------------------------------------------
+
+set $mod Mod4
+set $alt Mod1
+
+#-----------------------------------------------------------------------
+#			applications
+#-----------------------------------------------------------------------
+
+bindsym $mod+Return exec termite
+bindsym $mod+w exec chromium
+bindsym $mod+d exec rofi -show run -cache-dir=${XDG_DATA_DIR}/rofi
+
+#-----------------------------------------------------------------------
+#			window manager
+#-----------------------------------------------------------------------
+
+floating_modifier $mod
+
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+bindsym $mod+b focus parent
+bindsym $mod+f focus child
+
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+bindsym $mod+p workspace prev
+bindsym $mod+n workspace next
+
+bindsym $mod+v split toggle
+bindsym $mod+t layout toggle all
+
+bindsym $mod+space fullscreen toggle
+bindsym $mod+Shift+space floating toggle
+
+bindsym $mod+q kill
+
+#-----------------------------------------------------------------------
+#			modes
+#-----------------------------------------------------------------------
+
+bindsym $mod+i mode "i3wm-mode"
+bindsym $mod+r mode "resize-mode"
+
+mode "i3wm-mode" {
+     bindsym c reload
+     bindsym e exit
+     bindsym r restart
+
+     bindsym Return mode "default"
+     bindsym Escape mode "default"
+}
+
+mode "resize-mode" {
+     bindsym h resize shrink width  10
+     bindsym j resize grow   height 10
+     bindsym k resize shrink height 10
+     bindsym l resize grow   width  10
+
+     bindsym Return mode "default"
+     bindsym Escape mode "default"
+}
 
 #-----------------------------------------------------------------------
 #			rules
@@ -134,34 +140,14 @@ bindsym $mod+Shift+0 move container to workspace $workspace_10
 
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="bubble"] floating enable
-for_window [window_role="dialog"] floating enable
 for_window [window_type="dialog"] floating enable
 for_window [class="(?i)pinentry"] floating enable
+for_window [class="(?i)skype"]   floating disable
 
-assign [class="(?i)Skype"] workspace $workspace_08
-assign [class="Telegram"]  workspace $workspace_08
-
+assign [class="Skype"]    workspace $workspace_08
+assign [class="Telegram"] workspace $workspace_08
 #-----------------------------------------------------------------------
-#			theme
-#-----------------------------------------------------------------------
-
-font pango:JetBrains Mono Medium 10, Font Awesome 5 Free 10
-
-gaps outer 0
-gaps inner 5
-
-floating_minimum_size -1 x -1
-floating_maximum_size -1 x -1
-
-default_border pixel 2
-default_floating_border pixel 2
-
-client.focused             #708ca4    #2e3436    #babdb6    #6e706b    #708ca4
-client.focused_inactive    #6e706b    #2e3436    #babdb6    #6e706b    #6e706b
-client.unfocused           #6e706b    #2e3436    #babdb6    #6e706b    #6e706b
-
-#-----------------------------------------------------------------------
-#			behaviour
+#			general behaviour
 #-----------------------------------------------------------------------
 
 default_orientation horizontal
@@ -170,14 +156,47 @@ focus_wrapping yes
 mouse_warping output
 popup_during_fullscreen smart
 workspace_auto_back_and_forth no
+#-----------------------------------------------------------------------
+#			colors (tango)
+#-----------------------------------------------------------------------
+
+client.focused             #708ca4    #2e3436    #babdb6    #6e706b    #708ca4
+client.focused_inactive    #6e706b    #2e3436    #babdb6    #6e706b    #6e706b
+client.unfocused           #6e706b    #2e3436    #babdb6    #6e706b    #6e706b
+
+#-----------------------------------------------------------------------
+#			fonts
+#-----------------------------------------------------------------------
+
+font pango:JetBrains Mono Medium 10, Font Awesome 5 Free 10
+
+#-----------------------------------------------------------------------
+#			gaps
+#-----------------------------------------------------------------------
+
+gaps inner 5
+gaps outer 0
+
+#-----------------------------------------------------------------------
+#			borders
+#-----------------------------------------------------------------------
+
+default_border pixel 2
+default_floating_border pixel 2
+
+#-----------------------------------------------------------------------
+#			other
+#-----------------------------------------------------------------------
+
+floating_minimum_size -1 x -1
+floating_maximum_size -1 x -1
 
 #-----------------------------------------------------------------------
 #			autostart
 #-----------------------------------------------------------------------
 
-exec --no-startup-id polybar common
-exec --no-startup-id feh --no-fehbg --bg-fill $HOME/wallpapers/default.png
+exec --no-startup-id feh --no-fehbg --bg-fill --randomize $HOME/wallpapers/*
 exec --no-startup-id dunst -config $XDG_CONFIG_HOME/dunst/config
 exec --no-startup-id compton --config $XDG_CONFIG_HOME/compton/config
+exec --no-startup-id polybar common
 exec --no-startup-id telegram-desktop
-

@@ -1,0 +1,19 @@
+#!/bin/sh
+
+I3WM_CONFIG_DIR=${XDG_CONFIG_HOME}/i3
+I3WM_CONFIG_TEMPLATE=${I3WM_CONFIG_DIR}/template
+I3WM_CONFIG_OUTPUT=${I3WM_CONFIG_DIR}/config
+
+echo "" > ${I3WM_CONFIG_OUTPUT}
+echo "# THIS IS A GENERATED FILE." >> "${I3WM_CONFIG_OUTPUT}"
+echo "# DO NOT EDIT MANUALY." >> "${I3WM_CONFIG_OUTPUT}"
+echo "# ALL CHANGES WILL BE OVERWRITTEN." >> "${I3WM_CONFIG_OUTPUT}"
+
+while IFS= read -r line
+do
+    if [[ "$line" == "include "* ]]; then
+	I3WM_PARTIAL_FILE=${line:8}
+	cat $(echo ${I3WM_PARTIAL_FILE} | envsubst) >> ${I3WM_CONFIG_OUTPUT}
+    fi
+done < ${I3WM_CONFIG_TEMPLATE}
+
