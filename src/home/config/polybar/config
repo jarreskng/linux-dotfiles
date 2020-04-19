@@ -4,24 +4,32 @@
 
 [colors]
 
-color1  = ${xrdb:color1}
-color2  = ${xrdb:color2}
-color3  = ${xrdb:color3}
-color4  = ${xrdb:color4}
-color5  = ${xrdb:color5}
-color6  = ${xrdb:color6}
-color7  = ${xrdb:color7}
-color8  = ${xrdb:color8}
-color9  = ${xrdb:color9}
-color10 = ${xrdb:color10}
-color11 = ${xrdb:color11}
-color12 = ${xrdb:color12}
-color13 = ${xrdb:color13}
-color14 = ${xrdb:color14}
-color15 = ${xrdb:color15}
-
 foreground = ${xrdb:foreground}
 background = ${xrdb:background}
+
+color0     = ${xrdb:color0}
+color8     = ${xrdb:color8}
+
+color1     = ${xrdb:color1}
+color9     = ${xrdb:color9}
+
+color2     = ${xrdb:color2}
+color10    = ${xrdb:color10}
+
+color3     = ${xrdb:color3}
+color11    = ${xrdb:color11}
+
+color4     = ${xrdb:color4}
+color12    = ${xrdb:color12}
+
+color5     = ${xrdb:color5}
+color13    = ${xrdb:color13}
+
+color6     = ${xrdb:color6}
+color14    = ${xrdb:color14}
+
+color7     = ${xrdb:color7}
+color15    = ${xrdb:color15}
 
 ;-----------------------------------------------------------------------
 ;                         common bar
@@ -57,9 +65,9 @@ padding-right = 1
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = "Noto Sans Mono:style=Semibold:pixelsize=12;3"
-font-1 = "Font Awesome 5 Free:style=Solid:pixelsize=12;3"
-font-2 = "Font Awesome 5 Brands:style=Solid:pixelsize=12;3"
+font-0 = "JetBrains Mono Medium:style=Medium:pixelsize=11;3"
+font-1 = "Font Awesome 5 Free:style=Solid:pixelsize=11;3"
+font-2 = "Font Awesome 5 Brands:style=Solid:pixelsize=11;3"
 
 monitor = DisplayPort-0
 modules-left = i3
@@ -97,7 +105,7 @@ reverse-scroll = false
 
 label-urgent = "%name%"
 label-urgent-padding = 2
-label-urgent-foreground = ${colors.color1}
+label-urgent-foreground = ${colors.color3}
 
 label-visible = "%name%"
 label-visible-padding = 2
