@@ -1,17 +1,16 @@
-
-# THIS IS A GENERATED FILE.
-# DO NOT EDIT MANUALY.
-# ALL CHANGES WILL BE OVERWRITTEN.
 #-----------------------------------------------------------------------
-#			displays
+#			modifiers
 #-----------------------------------------------------------------------
 
-set $display_01 DisplayPort-0
-set $display_02 DisplayPort-0
+set $mod Mod4
+set $alt Mod1
 
 #-----------------------------------------------------------------------
 #			workspaces
 #-----------------------------------------------------------------------
+
+set $display_01 DisplayPort-0
+set $display_02 DisplayPort-0
 
 set $workspace_01 "01:1"
 set $workspace_02 "02:2"
@@ -23,10 +22,6 @@ set $workspace_07 "07:7"
 set $workspace_08 "08:8"
 set $workspace_09 "09:9"
 set $workspace_10 "10:0"
-
-#-----------------------------------------------------------------------
-#			outputs
-#-----------------------------------------------------------------------
 
 workspace $workspace_01 output $display_01
 workspace $workspace_02 output $display_01
@@ -43,47 +38,13 @@ workspace $workspace_10 output $display_02
 #			bindings
 #-----------------------------------------------------------------------
 
-bindsym $mod+1 workspace $workspace_01
-bindsym $mod+2 workspace $workspace_02
-bindsym $mod+3 workspace $workspace_03
-bindsym $mod+4 workspace $workspace_04
-bindsym $mod+5 workspace $workspace_05
-bindsym $mod+6 workspace $workspace_06
-bindsym $mod+7 workspace $workspace_07
-bindsym $mod+8 workspace $workspace_08
-bindsym $mod+9 workspace $workspace_09
-bindsym $mod+0 workspace $workspace_10
-
-bindsym $mod+Shift+1 move container to workspace $workspace_01
-bindsym $mod+Shift+2 move container to workspace $workspace_02
-bindsym $mod+Shift+3 move container to workspace $workspace_03
-bindsym $mod+Shift+4 move container to workspace $workspace_04
-bindsym $mod+Shift+5 move container to workspace $workspace_05
-bindsym $mod+Shift+6 move container to workspace $workspace_06
-bindsym $mod+Shift+7 move container to workspace $workspace_07
-bindsym $mod+Shift+8 move container to workspace $workspace_08
-bindsym $mod+Shift+9 move container to workspace $workspace_09
-bindsym $mod+Shift+0 move container to workspace $workspace_10
-#-----------------------------------------------------------------------
-#			modifiers
-#-----------------------------------------------------------------------
-
-set $mod Mod4
-set $alt Mod1
-
-#-----------------------------------------------------------------------
-#			applications
-#-----------------------------------------------------------------------
+floating_modifier $mod
 
 bindsym $mod+Return exec termite
 bindsym $mod+w exec chromium
 bindsym $mod+d exec rofi -show run -cache-dir=${XDG_DATA_DIR}/rofi
 
-#-----------------------------------------------------------------------
-#			window manager
-#-----------------------------------------------------------------------
-
-floating_modifier $mod
+bindsym $mod+q kill
 
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -106,7 +67,27 @@ bindsym $mod+t layout toggle all
 bindsym $mod+space fullscreen toggle
 bindsym $mod+Shift+space floating toggle
 
-bindsym $mod+q kill
+bindsym $mod+1 workspace $workspace_01
+bindsym $mod+2 workspace $workspace_02
+bindsym $mod+3 workspace $workspace_03
+bindsym $mod+4 workspace $workspace_04
+bindsym $mod+5 workspace $workspace_05
+bindsym $mod+6 workspace $workspace_06
+bindsym $mod+7 workspace $workspace_07
+bindsym $mod+8 workspace $workspace_08
+bindsym $mod+9 workspace $workspace_09
+bindsym $mod+0 workspace $workspace_10
+
+bindsym $mod+Shift+1 move container to workspace $workspace_01
+bindsym $mod+Shift+2 move container to workspace $workspace_02
+bindsym $mod+Shift+3 move container to workspace $workspace_03
+bindsym $mod+Shift+4 move container to workspace $workspace_04
+bindsym $mod+Shift+5 move container to workspace $workspace_05
+bindsym $mod+Shift+6 move container to workspace $workspace_06
+bindsym $mod+Shift+7 move container to workspace $workspace_07
+bindsym $mod+Shift+8 move container to workspace $workspace_08
+bindsym $mod+Shift+9 move container to workspace $workspace_09
+bindsym $mod+Shift+0 move container to workspace $workspace_10
 
 #-----------------------------------------------------------------------
 #			modes
@@ -146,8 +127,9 @@ for_window [class="(?i)skype"]   floating disable
 
 assign [class="Skype"]    workspace $workspace_08
 assign [class="Telegram"] workspace $workspace_08
+
 #-----------------------------------------------------------------------
-#			general behaviour
+#			behaviour
 #-----------------------------------------------------------------------
 
 default_orientation horizontal
@@ -156,40 +138,25 @@ focus_wrapping yes
 mouse_warping output
 popup_during_fullscreen smart
 workspace_auto_back_and_forth no
-#-----------------------------------------------------------------------
-#			colors (tango)
-#-----------------------------------------------------------------------
-
-client.focused             #708ca4    #2e3436    #babdb6    #6e706b    #708ca4
-client.focused_inactive    #6e706b    #2e3436    #babdb6    #6e706b    #6e706b
-client.unfocused           #6e706b    #2e3436    #babdb6    #6e706b    #6e706b
 
 #-----------------------------------------------------------------------
-#			fonts
+#			theme
 #-----------------------------------------------------------------------
 
 font pango:JetBrains Mono Medium 10, Font Awesome 5 Free 10
 
-#-----------------------------------------------------------------------
-#			gaps
-#-----------------------------------------------------------------------
+floating_minimum_size -1 x -1
+floating_maximum_size -1 x -1
 
 gaps inner 5
 gaps outer 0
 
-#-----------------------------------------------------------------------
-#			borders
-#-----------------------------------------------------------------------
-
 default_border pixel 2
 default_floating_border pixel 2
 
-#-----------------------------------------------------------------------
-#			other
-#-----------------------------------------------------------------------
-
-floating_minimum_size -1 x -1
-floating_maximum_size -1 x -1
+client.focused             #708ca4    #2e3436    #babdb6    #6e706b    #708ca4
+client.focused_inactive    #6e706b    #2e3436    #babdb6    #6e706b    #6e706b
+client.unfocused           #6e706b    #2e3436    #babdb6    #6e706b    #6e706b
 
 #-----------------------------------------------------------------------
 #			autostart

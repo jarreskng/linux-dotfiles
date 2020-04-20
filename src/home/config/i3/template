@@ -1,6 +1,0 @@
-include ${XDG_CONFIG_HOME}/i3/config.d/workspaces.conf
-include ${XDG_CONFIG_HOME}/i3/config.d/bindings.conf
-include ${XDG_CONFIG_HOME}/i3/config.d/rules.conf
-include ${XDG_CONFIG_HOME}/i3/config.d/behaviour.conf
-include ${XDG_CONFIG_HOME}/i3/config.d/theme.conf
-include ${XDG_CONFIG_HOME}/i3/config.d/autostart.conf
