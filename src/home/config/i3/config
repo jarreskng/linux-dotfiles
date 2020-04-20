@@ -9,9 +9,6 @@ set $alt Mod1
 #			workspaces
 #-----------------------------------------------------------------------
 
-set $display_01 DisplayPort-0
-set $display_02 DisplayPort-0
-
 set $workspace_01 "01:1"
 set $workspace_02 "02:2"
 set $workspace_03 "03:3"
@@ -23,16 +20,24 @@ set $workspace_08 "08:8"
 set $workspace_09 "09:9"
 set $workspace_10 "10:0"
 
-workspace $workspace_01 output $display_01
-workspace $workspace_02 output $display_01
-workspace $workspace_03 output $display_01
-workspace $workspace_04 output $display_01
-workspace $workspace_05 output $display_01
-workspace $workspace_06 output $display_02
-workspace $workspace_07 output $display_02
-workspace $workspace_08 output $display_02
-workspace $workspace_09 output $display_02
-workspace $workspace_10 output $display_02
+#-----------------------------------------------------------------------
+#			outputs
+#-----------------------------------------------------------------------
+
+set $output_01 DisplayPort-0
+set $output_02 DisplayPort-0
+
+workspace $workspace_01 output $output_01
+workspace $workspace_02 output $output_01
+workspace $workspace_03 output $output_01
+workspace $workspace_04 output $output_01
+workspace $workspace_05 output $output_01
+
+workspace $workspace_06 output $output_02
+workspace $workspace_07 output $output_02
+workspace $workspace_08 output $output_02
+workspace $workspace_09 output $output_02
+workspace $workspace_10 output $output_02
 
 #-----------------------------------------------------------------------
 #			bindings
