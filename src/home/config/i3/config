@@ -5,6 +5,15 @@
 set $mod Mod4
 set $alt Mod1
 
+floating_modifier $mod
+
+#-----------------------------------------------------------------------
+#			outputs
+#-----------------------------------------------------------------------
+
+set $output_01 DisplayPort-0
+set $output_02 DisplayPort-0
+
 #-----------------------------------------------------------------------
 #			workspaces
 #-----------------------------------------------------------------------
@@ -21,11 +30,8 @@ set $workspace_09 "09:9"
 set $workspace_10 "10:0"
 
 #-----------------------------------------------------------------------
-#			outputs
+#			workspaces to ouputs mapping
 #-----------------------------------------------------------------------
-
-set $output_01 DisplayPort-0
-set $output_02 DisplayPort-0
 
 workspace $workspace_01 output $output_01
 workspace $workspace_02 output $output_01
@@ -40,10 +46,34 @@ workspace $workspace_09 output $output_02
 workspace $workspace_10 output $output_02
 
 #-----------------------------------------------------------------------
-#			bindings
+#			workspaces bindings
 #-----------------------------------------------------------------------
 
-floating_modifier $mod
+bindsym $mod+1 workspace $workspace_01
+bindsym $mod+2 workspace $workspace_02
+bindsym $mod+3 workspace $workspace_03
+bindsym $mod+4 workspace $workspace_04
+bindsym $mod+5 workspace $workspace_05
+bindsym $mod+6 workspace $workspace_06
+bindsym $mod+7 workspace $workspace_07
+bindsym $mod+8 workspace $workspace_08
+bindsym $mod+9 workspace $workspace_09
+bindsym $mod+0 workspace $workspace_10
+
+bindsym $mod+Shift+1 move container to workspace $workspace_01
+bindsym $mod+Shift+2 move container to workspace $workspace_02
+bindsym $mod+Shift+3 move container to workspace $workspace_03
+bindsym $mod+Shift+4 move container to workspace $workspace_04
+bindsym $mod+Shift+5 move container to workspace $workspace_05
+bindsym $mod+Shift+6 move container to workspace $workspace_06
+bindsym $mod+Shift+7 move container to workspace $workspace_07
+bindsym $mod+Shift+8 move container to workspace $workspace_08
+bindsym $mod+Shift+9 move container to workspace $workspace_09
+bindsym $mod+Shift+0 move container to workspace $workspace_10
+
+#-----------------------------------------------------------------------
+#			general bindings
+#-----------------------------------------------------------------------
 
 bindsym $mod+Return exec termite
 bindsym $mod+w exec chromium
@@ -71,28 +101,6 @@ bindsym $mod+t layout toggle all
 
 bindsym $mod+space fullscreen toggle
 bindsym $mod+Shift+space floating toggle
-
-bindsym $mod+1 workspace $workspace_01
-bindsym $mod+2 workspace $workspace_02
-bindsym $mod+3 workspace $workspace_03
-bindsym $mod+4 workspace $workspace_04
-bindsym $mod+5 workspace $workspace_05
-bindsym $mod+6 workspace $workspace_06
-bindsym $mod+7 workspace $workspace_07
-bindsym $mod+8 workspace $workspace_08
-bindsym $mod+9 workspace $workspace_09
-bindsym $mod+0 workspace $workspace_10
-
-bindsym $mod+Shift+1 move container to workspace $workspace_01
-bindsym $mod+Shift+2 move container to workspace $workspace_02
-bindsym $mod+Shift+3 move container to workspace $workspace_03
-bindsym $mod+Shift+4 move container to workspace $workspace_04
-bindsym $mod+Shift+5 move container to workspace $workspace_05
-bindsym $mod+Shift+6 move container to workspace $workspace_06
-bindsym $mod+Shift+7 move container to workspace $workspace_07
-bindsym $mod+Shift+8 move container to workspace $workspace_08
-bindsym $mod+Shift+9 move container to workspace $workspace_09
-bindsym $mod+Shift+0 move container to workspace $workspace_10
 
 #-----------------------------------------------------------------------
 #			modes
