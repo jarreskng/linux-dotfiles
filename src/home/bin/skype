@@ -1,0 +1,3 @@
+#!/usr/bin/sh
+
+HOME=${SKYPE_STORE_DIR} /usr/bin/skypeforlinux
