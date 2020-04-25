@@ -1,113 +1,132 @@
-#-----------------------------------------------------------------------
-#			modifiers
-#-----------------------------------------------------------------------
+# -*- mode: conf -*- 
+
+# ----------------------------------------------------------------------
+#                       modifiers section
+# ----------------------------------------------------------------------
 
 set $mod Mod4
 set $alt Mod1
 
-floating_modifier $mod
+floating_modifier Mod4
 
-#-----------------------------------------------------------------------
-#			outputs
-#-----------------------------------------------------------------------
+# -*- mode: conf -*-
+
+# ----------------------------------------------------------------------
+#                       workspaces section
+# ----------------------------------------------------------------------
 
 set $output_01 DisplayPort-0
 set $output_02 DisplayPort-0
 
-#-----------------------------------------------------------------------
-#			workspaces
-#-----------------------------------------------------------------------
+set $ws_01 "01:1"
+set $ws_02 "02:2"
+set $ws_03 "03:3"
+set $ws_04 "04:4"
+set $ws_05 "05:5"
+set $ws_06 "06:6"
+set $ws_07 "07:7"
+set $ws_08 "08:8"
+set $ws_09 "09:9"
+set $ws_10 "10:0"
 
-set $workspace_01 "01:1"
-set $workspace_02 "02:2"
-set $workspace_03 "03:3"
-set $workspace_04 "04:4"
-set $workspace_05 "05:5"
-set $workspace_06 "06:6"
-set $workspace_07 "07:7"
-set $workspace_08 "08:8"
-set $workspace_09 "09:9"
-set $workspace_10 "10:0"
+workspace $ws_01 output $output_01
+workspace $ws_02 output $output_01
+workspace $ws_03 output $output_01
+workspace $ws_04 output $output_01
+workspace $ws_05 output $output_01
+workspace $ws_06 output $output_02
+workspace $ws_07 output $output_02
+workspace $ws_08 output $output_02
+workspace $ws_09 output $output_02
+workspace $ws_10 output $output_02
 
-#-----------------------------------------------------------------------
-#			workspaces to ouputs mapping
-#-----------------------------------------------------------------------
+# -*- mode: conf -*-
 
-workspace $workspace_01 output $output_01
-workspace $workspace_02 output $output_01
-workspace $workspace_03 output $output_01
-workspace $workspace_04 output $output_01
-workspace $workspace_05 output $output_01
+# ----------------------------------------------------------------------
+#                       bindings section
+# ----------------------------------------------------------------------
 
-workspace $workspace_06 output $output_02
-workspace $workspace_07 output $output_02
-workspace $workspace_08 output $output_02
-workspace $workspace_09 output $output_02
-workspace $workspace_10 output $output_02
+set $browser chromium
+set $terminal termite
+set $launcher rofi -show run -cache-dir=${XDG_DATA_DIR}/rofi
 
-#-----------------------------------------------------------------------
-#			workspaces bindings
-#-----------------------------------------------------------------------
-
-bindsym $mod+1 workspace $workspace_01
-bindsym $mod+2 workspace $workspace_02
-bindsym $mod+3 workspace $workspace_03
-bindsym $mod+4 workspace $workspace_04
-bindsym $mod+5 workspace $workspace_05
-bindsym $mod+6 workspace $workspace_06
-bindsym $mod+7 workspace $workspace_07
-bindsym $mod+8 workspace $workspace_08
-bindsym $mod+9 workspace $workspace_09
-bindsym $mod+0 workspace $workspace_10
-
-bindsym $mod+Shift+1 move container to workspace $workspace_01
-bindsym $mod+Shift+2 move container to workspace $workspace_02
-bindsym $mod+Shift+3 move container to workspace $workspace_03
-bindsym $mod+Shift+4 move container to workspace $workspace_04
-bindsym $mod+Shift+5 move container to workspace $workspace_05
-bindsym $mod+Shift+6 move container to workspace $workspace_06
-bindsym $mod+Shift+7 move container to workspace $workspace_07
-bindsym $mod+Shift+8 move container to workspace $workspace_08
-bindsym $mod+Shift+9 move container to workspace $workspace_09
-bindsym $mod+Shift+0 move container to workspace $workspace_10
-
-#-----------------------------------------------------------------------
-#			general bindings
-#-----------------------------------------------------------------------
-
-bindsym $mod+Return exec termite
-bindsym $mod+w exec chromium
-bindsym $mod+d exec rofi -show run -cache-dir=${XDG_DATA_DIR}/rofi
-
-bindsym $mod+q kill
-
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
-bindsym $mod+b focus parent
-bindsym $mod+f focus child
-
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
-
-bindsym $mod+p workspace prev
-bindsym $mod+n workspace next
-
-bindsym $mod+v split toggle
-bindsym $mod+t layout toggle all
-
-bindsym $mod+space fullscreen toggle
-bindsym $mod+Shift+space floating toggle
-
-#-----------------------------------------------------------------------
-#			modes
-#-----------------------------------------------------------------------
-
-bindsym $mod+i mode "i3wm-mode"
 bindsym $mod+r mode "resize-mode"
+bindsym $mod+i mode "i3wm-mode"
+bindsym $mod+x mode "launcher-mode"
+bindsym $mod+l mode "layout-mode"
+
+bindsym $mod+Shift+q kill
+
+bindsym $mod+b focus left
+bindsym $mod+f focus right
+bindsym $mod+p focus up
+bindsym $mod+n focus down
+bindsym $mod+e focus child
+bindsym $mod+a focus parent
+
+bindsym $mod+Shift+b move left
+bindsym $mod+Shift+f move right
+bindsym $mod+Shift+p move up
+bindsym $mod+Shift+n move down
+
+bindsym $mod+Shift+a workspace prev
+bindsym $mod+Shift+e workspace next
+
+bindsym $mod+grave scratchpad show
+bindsym $mod+Shift+grave move scratchpad
+
+bindsym $mod+1 workspace $ws_01
+bindsym $mod+2 workspace $ws_02
+bindsym $mod+3 workspace $ws_03
+bindsym $mod+4 workspace $ws_04
+bindsym $mod+5 workspace $ws_05
+bindsym $mod+6 workspace $ws_06
+bindsym $mod+7 workspace $ws_07
+bindsym $mod+8 workspace $ws_08
+bindsym $mod+9 workspace $ws_09
+bindsym $mod+0 workspace $ws_10
+
+bindsym $mod+Shift+1 move container to workspace $ws_01
+bindsym $mod+Shift+2 move container to workspace $ws_02
+bindsym $mod+Shift+3 move container to workspace $ws_03
+bindsym $mod+Shift+4 move container to workspace $ws_04
+bindsym $mod+Shift+5 move container to workspace $ws_05
+bindsym $mod+Shift+6 move container to workspace $ws_06
+bindsym $mod+Shift+7 move container to workspace $ws_07
+bindsym $mod+Shift+8 move container to workspace $ws_08
+bindsym $mod+Shift+9 move container to workspace $ws_09
+bindsym $mod+Shift+0 move container to workspace $ws_10
+
+
+mode "layout-mode" {
+     bindsym v split vertical;    mode "default"
+     bindsym h split horizontal;  mode "default"
+     bindsym t layout toggle;     mode "default"
+     bindsym f fullscreen toggle; mode "default"
+     bindsym t floating toggle;   mode "default"
+
+     bindsym Return mode "default"
+     bindsym Escape mode "default"
+}
+
+mode "launcher-mode" {
+     bindsym t exec $terminal;    mode "default"
+     bindsym w exec $browser;  	  mode "default"
+     bindsym d exec $launcher; 	  mode "default"
+     
+     bindsym Return mode "default"
+     bindsym Escape mode "default"
+}
+
+mode "resize-mode" {
+     bindsym b resize shrink width  10 px
+     bindsym f resize grow   height 10 px
+     bindsym p resize shrink height 10 px
+     bindsym n resize grow   width  10 px
+
+     bindsym Return mode "default"
+     bindsym Escape mode "default"
+}
 
 mode "i3wm-mode" {
      bindsym c reload
@@ -118,65 +137,74 @@ mode "i3wm-mode" {
      bindsym Escape mode "default"
 }
 
-mode "resize-mode" {
-     bindsym h resize shrink width  10
-     bindsym j resize grow   height 10
-     bindsym k resize shrink height 10
-     bindsym l resize grow   width  10
+# -*- mode: conf -*-
 
-     bindsym Return mode "default"
-     bindsym Escape mode "default"
-}
+# ----------------------------------------------------------------------
+#                       behaviour section
+# ----------------------------------------------------------------------
 
-#-----------------------------------------------------------------------
-#			rules
-#-----------------------------------------------------------------------
+floating_minimum_size -1 x -1
+floating_maximum_size -1 x -1
+
+focus_follows_mouse no
+focus_wrapping yes
+focus_on_window_activation urgent
+
+
+default_orientation horizontal
+popup_during_fullscreen smart
+hide_edge_borders none
+mouse_warping output
+workspace_auto_back_and_forth no
+
+# -*- mode: conf -*-
+
+# ----------------------------------------------------------------------
+#                       rules section
+# ----------------------------------------------------------------------
 
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="bubble"] floating enable
 for_window [window_type="dialog"] floating enable
 for_window [class="(?i)pinentry"] floating enable
-for_window [class="(?i)skype"]   floating disable
+for_window [class="(?i)skype"]    floating disable
 
-assign [class="Skype"]    workspace $workspace_08
-assign [class="Telegram"] workspace $workspace_08
+assign	   [class="(?i)chromium"] workspace $ws_02
+assign 	   [class="(?i)skype"]    workspace $ws_08
+assign 	   [class="(?i)telegram"] workspace $ws_08
 
-#-----------------------------------------------------------------------
-#			behaviour
-#-----------------------------------------------------------------------
+# -*- mode: conf -*-
 
-default_orientation horizontal
-focus_follows_mouse no
-focus_wrapping yes
-mouse_warping output
-popup_during_fullscreen smart
-workspace_auto_back_and_forth no
-
-#-----------------------------------------------------------------------
-#			theme
-#-----------------------------------------------------------------------
+# ----------------------------------------------------------------------
+#                       theme section
+# ----------------------------------------------------------------------
 
 font pango:JetBrains Mono Medium 10, Font Awesome 5 Free 10
 
-floating_minimum_size -1 x -1
-floating_maximum_size -1 x -1
+title_align left
+default_border pixel 1
+default_floating_border pixel 1
 
-gaps inner 5
-gaps outer 0
+# <selector>            <border>       <backgound>    <foreground>   <indicator>    <child_border>
+client.focused          #5e8d87        #2e3436        #babdb6        #454f52        #5e8d87
+client.focused_inactive #454f52	       #2e3436	      #babdb6	     #454f52	    #454f52
+client.unfocused        #454f52	       #2e3436	      #babdb6	     #454f52	    #454f52
+client.urgent           #fcaf3e	       #2e3436	      #babdb6	     #454f52	    #fcaf3e
+client.placeholder      #454f52	       #2e3436	      #babdb6	     #454f52	    #454f52
+client.background                      #2e3436
 
-default_border pixel 2
-default_floating_border pixel 2
+for_window [class=".*"] title_format "<span size='small'>  %class</span>"
 
-client.focused             #708ca4    #2e3436    #babdb6    #6e706b    #708ca4
-client.focused_inactive    #6e706b    #2e3436    #babdb6    #6e706b    #6e706b
-client.unfocused           #6e706b    #2e3436    #babdb6    #6e706b    #6e706b
+# -*- mode: conf -*-
 
-#-----------------------------------------------------------------------
-#			autostart
-#-----------------------------------------------------------------------
+# ----------------------------------------------------------------------
+#			autostart section
+# ----------------------------------------------------------------------
 
 exec --no-startup-id feh --no-fehbg --bg-fill --randomize $HOME/wallpapers/*
 exec --no-startup-id dunst -config $XDG_CONFIG_HOME/dunst/config
 exec --no-startup-id compton --config $XDG_CONFIG_HOME/compton/config
+
 exec --no-startup-id polybar common
 exec --no-startup-id telegram-desktop
+
