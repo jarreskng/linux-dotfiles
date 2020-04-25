@@ -1,8 +1,10 @@
+# -*- mode: conf-xdefaults -*-
+
 !-----------------------------------------------------------------------
 !                         settings
 !-----------------------------------------------------------------------
 
-rofi.font:		Noto Sans Mono Semibold 11
+rofi.font:		JetBrains Mono Medium 11
 rofi.combi-modi:	window,drun,ssh
 rofi.theme:		config/rofi/theme
 
