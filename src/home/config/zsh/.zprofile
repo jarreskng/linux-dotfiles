@@ -21,6 +21,7 @@ ensure_dir "${XDG_CACHE_HOME}"
 ensure_dir "${MAILBOX_STORE_DIR}"
 ensure_dir "${PASSWORD_STORE_DIR}"
 
-ensure_dir "${XDG_DATA_HOME}/zsh"
 ensure_dir "${XDG_DATA_HOME}/less"
+ensure_dir "${XDG_DATA_HOME}/zsh"
+ensure_dir "${XDG_DATA_HOME}/skype"
 
