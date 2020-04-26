@@ -120,9 +120,9 @@ mode "launcher-mode" {
 
 mode "resize-mode" {
      bindsym b resize shrink width  10 px
-     bindsym f resize grow   height 10 px
+     bindsym f resize grow   width  10 px
      bindsym p resize shrink height 10 px
-     bindsym n resize grow   width  10 px
+     bindsym n resize grow   height 10 px
 
      bindsym Return mode "default"
      bindsym Escape mode "default"
