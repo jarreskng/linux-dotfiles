@@ -180,21 +180,29 @@ assign 	   [class="(?i)telegram"] workspace $ws_08
 #                       theme section
 # ----------------------------------------------------------------------
 
-font pango:JetBrains Mono Medium 10, Font Awesome 5 Free 10
+font pango:JetBrains Mono Medium 10, Font Awesome 5 Free Solid 10
 
-title_align left
 default_border pixel 1
 default_floating_border pixel 1
-
-# <selector>            <border>       <backgound>    <foreground>   <indicator>    <child_border>
-client.focused          #5e8d87        #2e3436        #babdb6        #454f52        #5e8d87
-client.focused_inactive #454f52	       #2e3436	      #babdb6	     #454f52	    #454f52
-client.unfocused        #454f52	       #2e3436	      #babdb6	     #454f52	    #454f52
-client.urgent           #fcaf3e	       #2e3436	      #babdb6	     #454f52	    #fcaf3e
-client.placeholder      #454f52	       #2e3436	      #babdb6	     #454f52	    #454f52
-client.background                      #2e3436
+title_align left
 
 for_window [class=".*"] title_format "<span size='small'>  %class</span>"
+
+# <command>		<variable>	  <selector>
+set_from_resource 	$bg_normal	  background
+set_from_resource 	$marker_normal    color08
+set_from_resource 	$border_active    color06
+set_from_resource 	$border_normal    color08
+set_from_resource 	$border_urgent	  color03
+set_from_resource 	$fg_normal	  foreground
+
+# <selector>            <border>          <backgound>   <foreground>  <indicator>       <child_border>
+client.focused          $border_active    $bg_normal    $fg_normal    $marker_normal    $border_active
+client.focused_inactive $border_normal    $bg_normal    $fg_normal    $marker_normal    $border_normal
+client.unfocused        $border_normal    $bg_normal    $fg_normal    $marker_normal    $border_normal
+client.urgent           $border_urgent    $bg_normal    $fg_normal    $marker_normal    $border_urgent
+client.placeholder      $border_normal    $bg_normal    $fg_normal    $marker_normal    $border_normal
+client.background                         $bg_normal
 
 # -*- mode: conf -*-
 
