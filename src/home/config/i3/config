@@ -150,7 +150,6 @@ focus_follows_mouse no
 focus_wrapping yes
 focus_on_window_activation urgent
 
-
 default_orientation horizontal
 popup_during_fullscreen smart
 hide_edge_borders none
@@ -168,6 +167,8 @@ for_window [window_role="bubble"] floating enable
 for_window [window_type="dialog"] floating enable
 for_window [class="(?i)pinentry"] floating enable
 for_window [class="(?i)skype"]    floating disable
+
+for_window [instance="scratch"]   move scratchpad
 
 assign	   [class="(?i)chromium"] workspace $ws_02
 assign 	   [class="(?i)skype"]    workspace $ws_08
@@ -205,6 +206,6 @@ exec --no-startup-id feh --no-fehbg --bg-fill --randomize $HOME/wallpapers/*
 exec --no-startup-id dunst -config $XDG_CONFIG_HOME/dunst/config
 exec --no-startup-id compton --config $XDG_CONFIG_HOME/compton/config
 
-exec --no-startup-id polybar common
+exec --no-startup-id polybar primary
 exec --no-startup-id telegram-desktop
-
+exec --no-startup-id termite --name scratch
