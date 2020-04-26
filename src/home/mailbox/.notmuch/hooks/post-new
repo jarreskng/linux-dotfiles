@@ -1,4 +1,47 @@
 #!/bin/sh
 
-notmuch tag +cognitive -- path:"cognitive/**"
-notmuch tag +gmail     -- path:"gmail/**"
+# ----------------------------------------------------------------------
+#                       cognitive account
+# ----------------------------------------------------------------------
+
+notmuch tag +cognitive               -- path:"cognitive/**"
+
+notmuch tag +salary                  -- tag:"cognitive" from:"salary@cognitive.ru"
+notmuch tag +euphrat                 -- tag:"cognitive" from:"servereuphrat@cognitive.ru"
+notmuch tag +gitlab                  -- tag:"cognitive" from:"gitlab@gitlab.arch"
+notmuch tag +jira    -unread         -- tag:"cognitive" from:"jiracgn@cognitive.ru"
+notmuch tag +bidzaar -unread         -- tag:"cognitive" from:"noreply@bidzaar.com" from:"bidzaar-support@cognitive.ru"
+
+notmuch tag -new                     -- tag:"cognitive" tag:"new"
+
+# ----------------------------------------------------------------------
+#                       gmail account
+# ----------------------------------------------------------------------
+
+notmuch tag +gmail                   -- path:"gmail/**"
+
+notmuch tag +banking +paypal         -- tag:"gmail" from:"@paypal.com"
+notmuch tag +banking +tinkoff        -- tag:"gmail" from:"@tinkoff.ru"
+notmuch tag +banking +sberbank       -- tag:"gmail" from:"@sberbank.ru" from:"@sberins.ru"
+
+notmuch tag +government +gosuslugi   -- tag:"gmail" from:"@gosuslugi.ru"
+notmuch tag +government +fts         -- tag:"gmail" from:"@nalog.ru"
+notmuch tag +government +post        -- tag:"gmail" from:"@russianpost.ru"
+
+notmuch tag +forums +reactor         -- tag:"gmail" from:"@joyreactor.cc"
+notmuch tag +forums +lor             -- tag:"gmail" from:"@linux.org.ru"
+
+notmuch tag +market +aliexpress      -- tag:"gmail" from:"@aliexpress.com"
+notmuch tag +market +livemaster      -- tag:"gmail" from:"@livemaster.ru"
+
+notmuch tag +subscriptions +youtube  -- tag:"gmail" from:"@youtube.com"
+notmuch tag +subscriptions +yamusic  -- tag:"gmail" from:"@music.yandex.ru"
+notmuch tag +subscriptions +patreon  -- tag:"gmail" from:"@patreon.com"
+
+notmuch tag +git +github             -- tag:"gmail" from:"@gitlab.com"
+notmuch tag +git +gitlab             -- tag:"gmail" from:"@github.com"
+
+notmuch tag +list +archlinux         -- tag:"gmail" from:"@archlinux.org"
+notmuch tag +list +i3wm              -- tag:"gmail" from:"i3-announce.freelists.org"
+
+notmuch tag -new                     -- tag:"gmail" tag:"new"

@@ -3,8 +3,9 @@
 #-----------------------------------------------------------------------
 
 SyncState	/home/jarres/mailbox/.mbsync/
-Sync		pull
-Create		slave
+#Sync		Pull
+Create		Slave
+Expunge		None
 
 #-----------------------------------------------------------------------
 #                         gmail account

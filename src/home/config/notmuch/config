@@ -13,4 +13,4 @@ ignore=
 #exclude_tags=deleted;spam;
 
 [maildir]
-synchronize_flags=false
+synchronize_flags=true
