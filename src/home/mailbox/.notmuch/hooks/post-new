@@ -42,6 +42,6 @@ notmuch tag +git +github             -- tag:"gmail" from:"@gitlab.com"
 notmuch tag +git +gitlab             -- tag:"gmail" from:"@github.com"
 
 notmuch tag +list +archlinux         -- tag:"gmail" from:"@archlinux.org"
-notmuch tag +list +i3wm              -- tag:"gmail" from:"i3-announce.freelists.org"
+notmuch tag +list +i3wm              -- tag:"gmail" from:"i3-announce@freelists.org"
 
 notmuch tag -new                     -- tag:"gmail" tag:"new"
