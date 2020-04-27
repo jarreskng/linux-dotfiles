@@ -17,10 +17,10 @@ margin-top = 5
 [colors]
 foreground = ${xrdb:foreground}
 background = ${xrdb:background}
-background-alt = ${xrdb:color08}
-warning = ${xrdb:color03}
+background-alt = ${xrdb:color8}
+warning = ${xrdb:color3}
 warning-alt = ${xrdb:color11}
-accent = ${xrdb:color06}
+accent = ${xrdb:color6}
 accent-alt=${xrdb:color14}
 
 ; ----------------------------------------------------------------------
