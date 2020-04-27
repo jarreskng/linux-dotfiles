@@ -5,6 +5,7 @@
 
 (global-hl-line-mode t)
 (global-display-line-numbers-mode t)
+(fset 'yes-or-no-p 'y-or-n-p)
 
 (use-package doom-themes
   :ensure t

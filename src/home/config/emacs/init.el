@@ -8,7 +8,8 @@
 (setq user-emacs-directory (file-name-directory user-init-file))
 (eval-and-compile (add-to-list 'load-path (locate-user-emacs-file "config/")))
 
-(require 'config-directories)
+(require 'config-locations)
+(require 'config-custom)
 (require 'config-backups)
 (require 'config-autosave)
 (require 'config-packages)

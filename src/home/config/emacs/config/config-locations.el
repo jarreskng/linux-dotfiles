@@ -13,4 +13,13 @@
    (getenv "GNUPGHOME")
    (expand-file-name "gnupg" (getenv "XDG_CONFIG_HOME"))))
 
-(provide 'config-directories)
+(defconst emacs-packages-dir
+  (expand-file-name "packages" emacs-data-dir))
+
+(defconst emacs-autosave-dir
+  (expand-file-name "autosave" emacs-data-dir))
+
+(defconst emacs-backups-dir
+  (expand-file-name "backups" emacs-data-dir))
+
+(provide 'config-locations)

@@ -1,8 +1,6 @@
-(require 'config-directories)
+(require 'config-locations)
 
-(defvar emacs-backup-dir (file-name-as-directory (expand-file-name "backup" emacs-data-dir)))
-(setq backup-directory-alist `((".*" . ,emacs-backup-dir)))
-
+(setq backup-directory-alist `((".*" . ,emacs-backups-dir)))
 (setq make-backup-files t)
 (setq backup-by-copying t)
 (setq version-control t)
