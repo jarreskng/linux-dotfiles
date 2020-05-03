@@ -25,28 +25,28 @@ Xft.hintstyle:		hintsfull
 *.color8:      		#6C6C6C
 
 ! red
-*.color1:		#CF727B
-*.color9:       	#CF727B
+*.color1:		#DCA3A3
+*.color9:       	#DCA3A3
 
 ! green
-*.color2:		#87AF5F
-*.color10:      	#87AF5F
+*.color2:		#5F7F5F
+*.color10:      	#5F7F5F
 
 ! yellow
-*.color3:		#EBCB8B
-*.color11:      	#EBCB8B
+*.color3:		#E0CF9F
+*.color11:      	#E0CF9F
 
 ! blue
-*.color4:		#5FAFFF
-*.color12:      	#5FAFFF
+*.color4:		#7CB8BB
+*.color12:      	#7CB8BB
 
 ! magenta
-*.color5:		#D7AFFF
-*.color13:      	#D7AFFF
+*.color5:		#DC8CC3
+*.color13:      	#DC8CC3
 
 ! cyan
-*.color6:		#5FAFAF
-*.color14:      	#5FAF87
+*.color6:		#93E0E3
+*.color14:      	#93E0E3
 
 ! white
 *.color7:		#BAC6C0
