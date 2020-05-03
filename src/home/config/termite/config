@@ -27,40 +27,39 @@ font			= JetBrains Mono Medium 10
 
 # special
 foreground		= #C0C5CE
-foreground_bold     	= #CDD3DE
-cursor              	= #CDD3DE
-cursor_foreground   	= #1B2B34
-background          	= #1B2B34
+foreground_bold 	= #C0C5CE
+cursor          	= #C0C5CE
+background      	= #1B2B34
 
 # black
-color0  		= #1B2B34
-color8  		= #5E6563
+color0			= #1B2B34
+color8  		= #6C6C6C
 
 # red
-color1			= #FF7961
-color9  		= #FF7961
+color1			= #CF727B
+color9 			= #CF727B
 
 # green
-color2			= #99BB66
-color10 		= #99BB66
+color2			= #87AF5F
+color10   		= #87AF5F
 
 # yellow
-color3			= #D5A64B
-color11 		= #D5A64B
+color3			= #EBCB8B
+color11 		= #EBCB8B
 
 # blue
-color4			= #4A91D0
-color12 		= #4A91D0
+color4			= #5FAFFF
+color12 		= #5FAFFF
 
-# magent
-color5			= #9F8EC3
-color13 		= #9F8EC3
+# magenta
+color5			= #D7AFFF
+color13 		= #D7AFFF
 
 # cyan
-color6			= #5A9692
-color14 		= #4E7473
+color6			= #5FAFAF
+color14 		= #5F8787
 
 # white
-color7  		= #BAC6C0
-color15 		= #BAC6C0
+color7			= #BAC6C0
+color15 		= #C0C5CE
 
