@@ -13,42 +13,61 @@ Xft.lcdfilter:		lcddefault
 Xft.hintstyle:		hintsfull
 
 !-----------------------------------------------------------------------
+!                         urxvt settings
+!-----------------------------------------------------------------------
+
+
+
+URxvt.font:		xft:JetBrains Mono Medium:size=10,xft:Symbols Nerd Font:style=1000-em
+URxvt.boldFont:  	xft:JetBrains Mono Medium:size=10
+URxvt.italicFont:  	xft:JetBrains Mono Medium:size=10
+URxvt.boldItalicfont:  	xft:JetBrains Mono Medium:size=10
+
+URxvt.letterSpace: 	-1
+URxvt.lineSpace: 	0
+URxvt.depth: 		24
+URxvt.iso14755: 	false
+URxvt.internalBorder:  	12
+URxvt.scrollBar: 	false
+
+!-----------------------------------------------------------------------
 !                         colors scheme
 !-----------------------------------------------------------------------
 
 ! special
 *.foreground:		#C0C5CE
 *.background:   	#1B2B34
+*.cursorColor:  	#C0C5CE
 
 ! black
 *.color0:		#1B2B34
-*.color8:      		#6C6C6C
+*.color8:       	#2F4451
 
 ! red
-*.color1:		#CF727B
-*.color9:       	#CF727B
+*.color1:		#C16069
+*.color9:       	#C16069
 
 ! green
-*.color2:		#87AF5F
-*.color10:      	#87AF5F
+*.color2:		#B4BE82
+*.color10:      	#C0CA8E
 
 ! yellow
-*.color3:		#EBCB8B
-*.color11:      	#EBCB8B
+*.color3:		#ECCC87
+*.color11:      	#ECCC87
 
 ! blue
-*.color4:		#6699CC
-*.color12:      	#6699CC
+*.color4:		#84A0C6
+*.color12:      	#91ACD1
 
 ! magenta
-*.color5:		#CC99CC
-*.color13:      	#CC99CC
+*.color5:		#A093C7
+*.color13:      	#ADA0D3
 
 ! cyan
-*.color6:		#5FAFAF
-*.color14:      	#5F8787
+*.color6:		#89B8C2
+*.color14:      	#95C4CE
 
 ! white
-*.color7:		#BAC6C0
+*.color7:		#E1E1E1
 *.color15:      	#C0C5CE
 
