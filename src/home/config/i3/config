@@ -190,7 +190,7 @@ for_window [class=".*"] title_format "<span size='small'>  %class</span>"
 # <command>		<variable>	  <selector>
 set_from_resource 	$bg_normal	  background
 set_from_resource 	$marker_normal    color8
-set_from_resource 	$border_active    color14
+set_from_resource 	$border_active    color6
 set_from_resource 	$border_normal    color8
 set_from_resource 	$border_urgent	  color3
 set_from_resource 	$fg_normal	  foreground
