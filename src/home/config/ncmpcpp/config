@@ -78,7 +78,7 @@ browser_sort_format = {%a - }{%t}|{%f} {(%l)}
 #			columns
 # ----------------------------------------------------------------------
 
-song_columns_list_format = (10f)[cyan]{NE:Track} (30)[white]{t|f:Title} (20)[cyan]{a:Artist} (30)[white]{b:Album} (10f)[cyan]{lr:Time}
+song_columns_list_format = (10f)[white]{NE:Track} (15)[cyan]{a:Artist} (40)[white]{t|f:Title} (20)[cyan]{b:Album} (10f)[white]{lr:Time}
 
 # ----------------------------------------------------------------------
 #			hooks
