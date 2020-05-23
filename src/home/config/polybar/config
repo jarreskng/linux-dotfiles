@@ -5,282 +5,282 @@
 # ----------------------------------------------------------------------
 
 [fonts]
-font-0						= JetBrains Mono Medium:style=Medium:pixelsize=11;3
-font-1						= Font Awesome 5 Brands Regular:style=Regular:pixelsize=11;3
-font-2						= Font Awesome 5 Free Solid:style=Solid:pixelsize=11;3
-font-3						= Font Awesome 5 Free Regular:style=Regular:pixelsize=11;3
-font-4						= 
+font-0                      = JetBrains Mono Medium:style=Medium:pixelsize=11;3
+font-1                      = Font Awesome 5 Brands Regular:style=Regular:pixelsize=11;3
+font-2                      = Font Awesome 5 Free Solid:style=Solid:pixelsize=11;3
+font-3                      = Font Awesome 5 Free Regular:style=Regular:pixelsize=11;3
+font-4                      = 
 
 # ----------------------------------------------------------------------
 #                         colors
 # ----------------------------------------------------------------------
 
 [colors]
-background-primary			= ${xrdb:background}
-background-dark				= ${xrdb:color0}
-background-light			= ${xrdb:color8}
+background-primary          = ${xrdb:background}
+background-dark             = ${xrdb:color0}
+background-light            = ${xrdb:color8}
 
-foreground-primary			= ${xrdb:foreground}
-foreground-dark				= ${xrdb:color7}
-foreground-light			= ${xrdb:color15}
+foreground-primary          = ${xrdb:foreground}
+foreground-dark             = ${xrdb:color7}
+foreground-light            = ${xrdb:color15}
 
-red-dark					= ${xrdb:color1}
-red-light					= ${xrdb:color9}
+red-dark                    = ${xrdb:color1}
+red-light                   = ${xrdb:color9}
 
-green-dark					= ${xrdb:color2}
-green-light					= ${xrdb:color10}
+green-dark                  = ${xrdb:color2}
+green-light                 = ${xrdb:color10}
 
-yellow-dark					= ${xrdb:color3}
-yellow-light				= ${xrdb:color11}
+yellow-dark                 = ${xrdb:color3}
+yellow-light                = ${xrdb:color11}
 
-blue-dark					= ${xrdb:color4}
-blue-light					= ${xrdb:color12}
+blue-dark                   = ${xrdb:color4}
+blue-light                  = ${xrdb:color12}
 
-magenta-dark				= ${xrdb:color5}
-magenta-light				= ${xrdb:color13}
+magenta-dark                = ${xrdb:color5}
+magenta-light               = ${xrdb:color13}
 
-cyan-dark					= ${xrdb:color6}
-cyan-light					= ${xrdb:color14}
+cyan-dark                   = ${xrdb:color6}
+cyan-light                  = ${xrdb:color14}
 
 # ----------------------------------------------------------------------
 #                         variables
 # ----------------------------------------------------------------------
-			
+            
 [variables]
-bar-center					= true
-bar-height					= 35
-bar-padding					= 1
+bar-center                  = true
+bar-height                  = 35
+bar-padding                 = 1
 
-module-padding				= 2
-module-margin-left			= 1
-module-margin-right			= 0
-module-token-padding		= 1
+module-padding              = 2
+module-margin-left          = 1
+module-margin-right         = 0
+module-token-padding        = 1
 
-line-size					= 5
-line-color					= ${colors.background-primary}
+line-size                   = 5
+line-color                  = ${colors.background-primary}
 
-border-size					= 0
-border-color				= ${colors.background-primary}
+border-size                 = 0
+border-color                = ${colors.background-primary}
 
 # ----------------------------------------------------------------------
 #                         global/wm
 # ----------------------------------------------------------------------
 
 [global/wm]
-margin-top					= 0
-margin-bottom				= 0
+margin-top                  = 0
+margin-bottom               = 0
 
 # ----------------------------------------------------------------------
 #                         settings
 # ----------------------------------------------------------------------
 
 [settings]
-screenchange-reload			= true
+screenchange-reload         = true
 
 # ----------------------------------------------------------------------
 #                         bar/primary
 # ----------------------------------------------------------------------
 
 [bar/primary]
-height						= ${variables.bar-height}
-padding						= ${variables.bar-padding}
-fixed-center				= ${variables.bar-center}
+height                      = ${variables.bar-height}
+padding                     = ${variables.bar-padding}
+fixed-center                = ${variables.bar-center}
 
-foreground					= ${colors.foreground-primary}
-background					= ${colors.background-primary}
+foreground                  = ${colors.foreground-primary}
+background                  = ${colors.background-primary}
 
-line-size					= ${variables.line-size}
-border-size					= ${variables.border-size}
-border-color				= ${variables.border-color}
+line-size                   = ${variables.line-size}
+border-size                 = ${variables.border-size}
+border-color                = ${variables.border-color}
 
-module-margin-left			= ${variables.module-margin-left}
-module-margin-right 		= ${variables.module-margin-right}
+module-margin-left          = ${variables.module-margin-left}
+module-margin-right         = ${variables.module-margin-right}
 
-font-0						= ${fonts.font-0}
-font-1						= ${fonts.font-1}
-font-2						= ${fonts.font-2}
-font-3						= ${fonts.font-3}
-font-4						= ${fonts.font-4}
+font-0                      = ${fonts.font-0}
+font-1                      = ${fonts.font-1}
+font-2                      = ${fonts.font-2}
+font-3                      = ${fonts.font-3}
+font-4                      = ${fonts.font-4}
 
-modules-left				= i3
-modules-center				= mpd
-modules-right				= keyboard cpu ram audio date
+modules-left                = i3
+modules-center              = mpd
+modules-right               = keyboard cpu ram audio date
 
 # ----------------------------------------------------------------------
 #                         module/i3
 # ----------------------------------------------------------------------
 
 [module/i3]
-type						= internal/i3
+type                        = internal/i3
 
-pin-workspaces				= false
-strip-wsnumbers				= true
-index-sort					= true
-enable-click				= true
-enable-scroll				= false
-reverse-scroll				= false
-wrapping-scroll				= false
+pin-workspaces              = false
+strip-wsnumbers             = true
+index-sort                  = true
+enable-click                = true
+enable-scroll               = false
+reverse-scroll              = false
+wrapping-scroll             = false
 
-format						= <label-state> <label-mode>
+format                      = <label-state> <label-mode>
 
-label-mode			  	  	= %mode%
-label-mode-padding	  		= ${variables.module-padding}
-label-mode-overline			= ${variables.line-color}
-label-mode-underline		= ${variables.line-color}
-label-mode-background		= ${colors.yellow-dark}
-label-mode-foreground		= ${colors.background-primary}
+label-mode                  = %mode%
+label-mode-padding          = ${variables.module-padding}
+label-mode-overline         = ${variables.line-color}
+label-mode-underline        = ${variables.line-color}
+label-mode-background       = ${colors.yellow-dark}
+label-mode-foreground       = ${colors.background-primary}
 
-label-urgent				= %name%
-label-urgent-padding		= ${variables.module-padding}
-label-urgent-overline		= ${variables.line-color}
-label-urgent-underline		= ${variables.line-color}
-label-urgent-background		= ${colors.yellow-dark}
-label-urgent-foreground		= ${colors.background-primary}
+label-urgent                = %name%
+label-urgent-padding        = ${variables.module-padding}
+label-urgent-overline       = ${variables.line-color}
+label-urgent-underline      = ${variables.line-color}
+label-urgent-background     = ${colors.yellow-dark}
+label-urgent-foreground     = ${colors.background-primary}
 
-label-focused				= %name%
-label-focused-padding		= ${variables.module-padding}
-label-focused-overline		= ${variables.line-color}
-label-focused-underline		= ${variables.line-color}
-label-focused-background	= ${colors.cyan-dark}
-label-focused-foreground	= ${colors.background-primary}
+label-focused               = %name%
+label-focused-padding       = ${variables.module-padding}
+label-focused-overline      = ${variables.line-color}
+label-focused-underline     = ${variables.line-color}
+label-focused-background    = ${colors.cyan-dark}
+label-focused-foreground    = ${colors.background-primary}
 
-label-unfocused				= %name%
-label-unfocused-padding		= ${variables.module-padding}
-label-unfocused-overline	= ${variables.line-color}
-label-unfocused-underline	= ${variables.line-color}
-label-unfocused-background	= ${colors.background-light}
-label-unfocused-foreground	= ${colors.foreground-primary}
+label-unfocused             = %name%
+label-unfocused-padding     = ${variables.module-padding}
+label-unfocused-overline    = ${variables.line-color}
+label-unfocused-underline   = ${variables.line-color}
+label-unfocused-background  = ${colors.background-light}
+label-unfocused-foreground  = ${colors.foreground-primary}
 
-label-visible				= %name%
-label-visible-padding		= ${variables.module-padding}
-label-visible-overline		= ${variables.line-color}
-label-visible-underline		= ${variables.line-color}
-label-visible-background	= ${colors.background-light}
-label-visible-foreground	= ${colors.foreground-primary}
+label-visible               = %name%
+label-visible-padding       = ${variables.module-padding}
+label-visible-overline      = ${variables.line-color}
+label-visible-underline     = ${variables.line-color}
+label-visible-background    = ${colors.background-light}
+label-visible-foreground    = ${colors.foreground-primary}
 
 # ----------------------------------------------------------------------
 #                         module/date
 # ----------------------------------------------------------------------
 
 [module/date]
-type						= internal/date
-interval					= 1
+type                        = internal/date
+interval                    = 1
 
-time						= %I:%M %p
-time-alt					= %d-%m-%y
+time                        = %I:%M %p
+time-alt                    = %d-%m-%y
 
-date						= %d-%m
-date-alt					= %d-%m-%y
+date                        = %d-%m
+date-alt                    = %d-%m-%y
 
-label						= %time%
+label                       = %time%
 
-format						= <label>
-format-padding				= ${variables.module-padding}
-format-overline				= ${variables.line-color}
-format-underline			= ${variables.line-color}
-format-background			= ${colors.background-light}
-format-foreground			= ${colors.foreground-primary}
+format                      = <label>
+format-padding              = ${variables.module-padding}
+format-overline             = ${variables.line-color}
+format-underline            = ${variables.line-color}
+format-background           = ${colors.background-light}
+format-foreground           = ${colors.foreground-primary}
 
-format-prefix				= 
+format-prefix               = 
 format-prefix-padding-right = ${variables.module-token-padding}
-format-suffix-padding-left	= ${variables.module-token-padding}
+format-suffix-padding-left  = ${variables.module-token-padding}
 
 # ----------------------------------------------------------------------
 #                         module/memory
 # ----------------------------------------------------------------------
 
 [module/ram]
-type						= internal/memory
-interval					= 1
+type                        = internal/memory
+interval                    = 1
 
-label						= %percentage_used%%
+label                       = %percentage_used%%
 
-format						= <label>
-format-padding				= ${variables.module-padding}
-format-overline				= ${variables.line-color}
-format-underline			= ${variables.line-color}
-format-background			= ${colors.background-light}
-format-foreground			= ${colors.foreground-primary}
+format                      = <label>
+format-padding              = ${variables.module-padding}
+format-overline             = ${variables.line-color}
+format-underline            = ${variables.line-color}
+format-background           = ${colors.background-light}
+format-foreground           = ${colors.foreground-primary}
 
-format-prefix				= RAM
+format-prefix               = RAM
 format-prefix-padding-right = ${variables.module-token-padding}
-format-suffix-padding-left	= ${variables.module-token-padding}
+format-suffix-padding-left  = ${variables.module-token-padding}
 
 # ----------------------------------------------------------------------
 #                         module/cpu
 # ----------------------------------------------------------------------
 
 [module/cpu]
-type						= internal/cpu
-interval					= 1
+type                        = internal/cpu
+interval                    = 1
 
-label						= %percentage%%
+label                       = %percentage%%
 
-format						= <label>
-format-padding				= ${variables.module-padding}
-format-overline				= ${variables.line-color}
-format-underline		 	= ${variables.line-color}
-format-background			= ${colors.background-light}
-format-foreground			= ${colors.foreground-primary}
+format                      = <label>
+format-padding              = ${variables.module-padding}
+format-overline             = ${variables.line-color}
+format-underline            = ${variables.line-color}
+format-background           = ${colors.background-light}
+format-foreground           = ${colors.foreground-primary}
 
-format-prefix				= CPU
+format-prefix               = CPU
 format-prefix-padding-right = ${variables.module-token-padding}
-format-suffix-padding-left	= ${variables.module-token-padding}
+format-suffix-padding-left  = ${variables.module-token-padding}
 
 # ----------------------------------------------------------------------
 #                         module/keyboard
 # ----------------------------------------------------------------------
 
 [module/keyboard]
-type						= internal/xkeyboard
-interval					= 1
+type                        = internal/xkeyboard
+interval                    = 1
 
-layout-icon-0				= ru;RU
-layout-icon-1				= us;US
+layout-icon-0               = ru;RU
+layout-icon-1               = us;US
 
-label-layout				= %icon%
+label-layout                = %icon%
 
-format						= <label-layout>
-format-padding				= ${variables.module-padding}
-format-overline				= ${variables.line-color}
-format-underline			= ${variables.line-color}
-format-background			= ${colors.background-light}
-format-foreground			= ${colors.foreground-primary}
+format                      = <label-layout>
+format-padding              = ${variables.module-padding}
+format-overline             = ${variables.line-color}
+format-underline            = ${variables.line-color}
+format-background           = ${colors.background-light}
+format-foreground           = ${colors.foreground-primary}
 
-format-prefix				= KBD
+format-prefix               = KBD
 format-prefix-padding-right = ${variables.module-token-padding}
-format-suffix-padding-left	= ${variables.module-token-padding}
+format-suffix-padding-left  = ${variables.module-token-padding}
 
 # ----------------------------------------------------------------------
 #                         module/audio
 # ----------------------------------------------------------------------
 
 [module/audio]
-type						= internal/pulseaudio
-interval					= 5
+type                        = internal/pulseaudio
+interval                    = 5
 
-sink						=
-use-ui-max					= false
+sink                        =
+use-ui-max                  = false
 
-label-volume				= %percentage%%
-label-muted					= OFF
+label-volume                = %percentage%%
+label-muted                 = OFF
 
-format-volume				= <label-volume>
-format-volume-padding		= ${variables.module-padding}
-format-volume-overline		= ${variables.line-color}
-format-volume-underline		= ${variables.line-color}
-format-volume-background	= ${colors.background-light}
-format-volume-foreground	= ${colors.foreground-primary}
+format-volume               = <label-volume>
+format-volume-padding       = ${variables.module-padding}
+format-volume-overline      = ${variables.line-color}
+format-volume-underline     = ${variables.line-color}
+format-volume-background    = ${colors.background-light}
+format-volume-foreground    = ${colors.foreground-primary}
 
-format-muted				= <label-muted>
-format-muted-padding		= ${variables.module-padding}
-format-muted-overline		= ${variables.line-color}
-format-muted-underline		= ${variables.line-color}
-format-muted-background		= ${colors.yellow-dark}
-format-muted-foreground		= ${colors.background-primary}
+format-muted                = <label-muted>
+format-muted-padding        = ${variables.module-padding}
+format-muted-overline       = ${variables.line-color}
+format-muted-underline      = ${variables.line-color}
+format-muted-background     = ${colors.yellow-dark}
+format-muted-foreground     = ${colors.background-primary}
 
-format-volume-prefix		= VOL
-format-muted-prefix		    = VOL
+format-volume-prefix        = VOL
+format-muted-prefix         = VOL
 
 format-muted-prefix-padding-right  = ${variables.module-token-padding}
 format-volume-prefix-padding-right = ${variables.module-token-padding}
@@ -290,33 +290,33 @@ format-volume-prefix-padding-right = ${variables.module-token-padding}
 # ----------------------------------------------------------------------
 
 [module/mpd]
-type						= internal/mpd
-interval					= 1
+type                        = internal/mpd
+interval                    = 1
 
-host						= 127.0.0.1
-port						= 6600
+host                        = 127.0.0.1
+port                        = 6600
 
-label-song					= %artist% - %title%
+label-song                  = %artist% - %title%
 
-format-online				= <label-song>
-format-online-padding		= ${variables.module-padding}
-format-online-overline		= ${variables.line-color}
-format-online-underline		= ${variables.line-color}
+format-online               = <label-song>
+format-online-padding       = ${variables.module-padding}
+format-online-overline      = ${variables.line-color}
+format-online-underline     = ${variables.line-color}
 
-format-playing-background	= ${colors.cyan-dark}
-format-playing-foreground	= ${colors.background-primary}
+format-playing-background   = ${colors.cyan-dark}
+format-playing-foreground   = ${colors.background-primary}
 
-format-paused-background	= ${colors.background-light}
-format-paused-foreground	= ${colors.background-primary}
+format-paused-background    = ${colors.background-light}
+format-paused-foreground    = ${colors.background-primary}
 
-format-stopped				= MPD IS STOPPED
-format-stopped-background	= ${colors.background-light}
-format-stopped-foreground	= ${colors.background-primary}
+format-stopped              = MPD IS STOPPED
+format-stopped-background   = ${colors.background-light}
+format-stopped-foreground   = ${colors.background-primary}
 
-format-offline 				= MPD IS OFFLINE
-format-offline-padding		= ${variables.module-padding}
-format-offline-overline		= ${variables.line-color}
-format-offline-underline	= ${variables.line-color}
-format-offline-background	= ${colors.yellow-dark}
-format-offline-foreground	= ${colors.background-primary}
+format-offline              = MPD IS OFFLINE
+format-offline-padding      = ${variables.module-padding}
+format-offline-overline     = ${variables.line-color}
+format-offline-underline    = ${variables.line-color}
+format-offline-background   = ${colors.yellow-dark}
+format-offline-foreground   = ${colors.background-primary}
 
