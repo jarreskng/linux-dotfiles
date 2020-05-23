@@ -1,163 +1,322 @@
-; ----------------------------------------------------------------------
-;                         global settings
-; ----------------------------------------------------------------------
+# -*- mode: conf; tab-width: 4 -*-
 
-[settings]
-screenchange-reload = true
-pseudo-transparency = false
+# ----------------------------------------------------------------------
+#                         fonts
+# ----------------------------------------------------------------------
 
-[global/wm]
-margin-bottom = 5
-margin-top = 5
+[fonts]
+font-0						= JetBrains Mono Medium:style=Medium:pixelsize=11;3
+font-1						= Font Awesome 5 Brands Regular:style=Regular:pixelsize=11;3
+font-2						= Font Awesome 5 Free Solid:style=Solid:pixelsize=11;3
+font-3						= Font Awesome 5 Free Regular:style=Regular:pixelsize=11;3
+font-4						= 
 
-; ----------------------------------------------------------------------
-;                         colorscheme
-; ----------------------------------------------------------------------
+# ----------------------------------------------------------------------
+#                         colors
+# ----------------------------------------------------------------------
 
 [colors]
-foreground = ${xrdb:foreground}
-background = ${xrdb:background}
-background-alt = ${xrdb:color8}
-warning = ${xrdb:color3}
-warning-alt = ${xrdb:color11}
-accent = ${xrdb:color6}
-accent-alt=${xrdb:color14}
+background-primary			= ${xrdb:background}
+background-dark				= ${xrdb:color0}
+background-light			= ${xrdb:color8}
 
-; ----------------------------------------------------------------------
-;                         primary bar
-; ----------------------------------------------------------------------
+foreground-primary			= ${xrdb:foreground}
+foreground-dark				= ${xrdb:color7}
+foreground-light			= ${xrdb:color15}
+
+red-dark					= ${xrdb:color1}
+red-light					= ${xrdb:color9}
+
+green-dark					= ${xrdb:color2}
+green-light					= ${xrdb:color10}
+
+yellow-dark					= ${xrdb:color3}
+yellow-light				= ${xrdb:color11}
+
+blue-dark					= ${xrdb:color4}
+blue-light					= ${xrdb:color12}
+
+magenta-dark				= ${xrdb:color5}
+magenta-light				= ${xrdb:color13}
+
+cyan-dark					= ${xrdb:color6}
+cyan-light					= ${xrdb:color14}
+
+# ----------------------------------------------------------------------
+#                         variables
+# ----------------------------------------------------------------------
+			
+[variables]
+bar-center					= true
+bar-height					= 35
+bar-padding					= 1
+
+module-padding				= 2
+module-margin-left			= 1
+module-margin-right			= 0
+module-token-padding		= 1
+
+line-size					= 5
+line-color					= ${colors.background-primary}
+
+border-size					= 0
+border-color				= ${colors.background-primary}
+
+# ----------------------------------------------------------------------
+#                         global/wm
+# ----------------------------------------------------------------------
+
+[global/wm]
+margin-top					= 0
+margin-bottom				= 0
+
+# ----------------------------------------------------------------------
+#                         settings
+# ----------------------------------------------------------------------
+
+[settings]
+screenchange-reload			= true
+
+# ----------------------------------------------------------------------
+#                         bar/primary
+# ----------------------------------------------------------------------
 
 [bar/primary]
-monitor-strict = false
-monitor-exact = false
-override-redirect = false
+height						= ${variables.bar-height}
+padding						= ${variables.bar-padding}
+fixed-center				= ${variables.bar-center}
 
-wm-restack = i3
-enable-ipc = true
+foreground					= ${colors.foreground-primary}
+background					= ${colors.background-primary}
 
-cursor-click = pointer
-cursor-scroll = ns-resize
+line-size					= ${variables.line-size}
+border-size					= ${variables.border-size}
+border-color				= ${variables.border-color}
 
-bottom = false
-fixed-center = true
+module-margin-left			= ${variables.module-margin-left}
+module-margin-right 		= ${variables.module-margin-right}
 
-width = 100%
-height = 35
+font-0						= ${fonts.font-0}
+font-1						= ${fonts.font-1}
+font-2						= ${fonts.font-2}
+font-3						= ${fonts.font-3}
+font-4						= ${fonts.font-4}
 
-offset-x = 0
-offset-y = 0
-radius = 0.0
+modules-left				= i3
+modules-center				= mpd
+modules-right				= keyboard cpu ram audio date
 
-line-size = 3
-line-color = 
-
-padding-left = 0
-padding-right = 1
-module-margin = 1
-
-modules-left = i3
-modules-center = date
-modules-right = notmuch pulseaudio
-
-background = ${colors.background}
-foreground = ${colors.foreground}
-
-font-0 = JetBrains Mono Medium:style=Medium:pixelsize=11;3
-font-1 = Font Awesome 5 Brands Regular:style=Regular:pixelsize=11;3
-font-2 = Font Awesome 5 Free Solid:style=Solid:pixelsize=11;3
-fonr-3 = Font Awesome 5 Free Regular:style=Regular:pixelsize=11;3
-
-; ----------------------------------------------------------------------
-;                         module-i3wm
-; ----------------------------------------------------------------------
+# ----------------------------------------------------------------------
+#                         module/i3
+# ----------------------------------------------------------------------
 
 [module/i3]
-type = internal/i3
+type						= internal/i3
 
-pin-workspaces = true
-strip-wsnumbers = true
-index-sort = true
+pin-workspaces				= false
+strip-wsnumbers				= true
+index-sort					= true
+enable-click				= true
+enable-scroll				= false
+reverse-scroll				= false
+wrapping-scroll				= false
 
-enable-click = true
-enable-scroll = false
+format						= <label-state> <label-mode>
 
-format = <label-state> <label-mode>
+label-mode			  	  	= %mode%
+label-mode-padding	  		= ${variables.module-padding}
+label-mode-overline			= ${variables.line-color}
+label-mode-underline		= ${variables.line-color}
+label-mode-background		= ${colors.yellow-dark}
+label-mode-foreground		= ${colors.background-primary}
 
-label-mode = %mode%
-label-mode-padding = 0
-label-mode-underline = 
-label-mode-foreground = ${colors.accent}
-label-mode-background = ${colors.background}
+label-urgent				= %name%
+label-urgent-padding		= ${variables.module-padding}
+label-urgent-overline		= ${variables.line-color}
+label-urgent-underline		= ${variables.line-color}
+label-urgent-background		= ${colors.yellow-dark}
+label-urgent-foreground		= ${colors.background-primary}
 
-label-focused = "%name%"
-label-focused-padding = 2
-label-focused-underline = 
-label-focused-foreground = ${colors.foreground}
-label-focused-background = ${colors.background-alt}
+label-focused				= %name%
+label-focused-padding		= ${variables.module-padding}
+label-focused-overline		= ${variables.line-color}
+label-focused-underline		= ${variables.line-color}
+label-focused-background	= ${colors.cyan-dark}
+label-focused-foreground	= ${colors.background-primary}
 
-label-unfocused = "%name%"
-label-unfocused-padding = 2
-label-unfocused-underline = 
-label-unfocused-foreground = ${colors.foreground}
-label-unfocused-background = ${colors.background}
+label-unfocused				= %name%
+label-unfocused-padding		= ${variables.module-padding}
+label-unfocused-overline	= ${variables.line-color}
+label-unfocused-underline	= ${variables.line-color}
+label-unfocused-background	= ${colors.background-light}
+label-unfocused-foreground	= ${colors.foreground-primary}
 
-label-urgent = "%name%"
-label-urgent-padding = 2
-label-urgent-underline = 
-label-urgent-foreground = ${colors.warning}
-label-urgent-background = ${colors.background}
+label-visible				= %name%
+label-visible-padding		= ${variables.module-padding}
+label-visible-overline		= ${variables.line-color}
+label-visible-underline		= ${variables.line-color}
+label-visible-background	= ${colors.background-light}
+label-visible-foreground	= ${colors.foreground-primary}
 
-label-visible = "%name%"
-label-visible-padding = 2
-label-visible-underline =
-label-visible-foreground = ${colors.foreground}
-label-visible-background = ${colors.background}
-
-; ----------------------------------------------------------------------
-;                         module-date
-; ----------------------------------------------------------------------
+# ----------------------------------------------------------------------
+#                         module/date
+# ----------------------------------------------------------------------
 
 [module/date]
-type = internal/date
-interval = 1.0
+type						= internal/date
+interval					= 1
 
-label = %time% %date%
+time						= %I:%M %p
+time-alt					= %d-%m-%y
 
-date = %d-%m
-date-alt = %d-%m-%Y
+date						= %d-%m
+date-alt					= %d-%m-%y
 
-time = %H:%M
-time-alt = %H:%M:%S
+label						= %time%
 
-; ----------------------------------------------------------------------
-;                         module-audio
-; ----------------------------------------------------------------------
+format						= <label>
+format-padding				= ${variables.module-padding}
+format-overline				= ${variables.line-color}
+format-underline			= ${variables.line-color}
+format-background			= ${colors.background-light}
+format-foreground			= ${colors.foreground-primary}
 
-[module/pulseaudio]
-type = internal/pulseaudio
-interval = 5
+format-prefix				= 
+format-prefix-padding-right = ${variables.module-token-padding}
+format-suffix-padding-left	= ${variables.module-token-padding}
 
-sink = 
-use-ui-max = false
+# ----------------------------------------------------------------------
+#                         module/memory
+# ----------------------------------------------------------------------
 
-format-volume = <label-volume>
-format-volume-prefix = 
-format-volume-prefix-padding-right = 1
+[module/ram]
+type						= internal/memory
+interval					= 1
 
-format-muted-prefix = 
-format-muted-prefix-padding-right = 1
-format-muted-foreground = ${colors.background-alt}
+label						= %percentage_used%%
 
-; ----------------------------------------------------------------------
-;                         module-notmuch
-; ----------------------------------------------------------------------
+format						= <label>
+format-padding				= ${variables.module-padding}
+format-overline				= ${variables.line-color}
+format-underline			= ${variables.line-color}
+format-background			= ${colors.background-light}
+format-foreground			= ${colors.foreground-primary}
 
-[module/notmuch]
-type = custom/script
-interval = 5
+format-prefix				= RAM
+format-prefix-padding-right = ${variables.module-token-padding}
+format-suffix-padding-left	= ${variables.module-token-padding}
 
-exec = notmuch count -- tag:gmail and tag:unread
+# ----------------------------------------------------------------------
+#                         module/cpu
+# ----------------------------------------------------------------------
 
-format-prefix = 
-format-prefix-padding-right = 1
+[module/cpu]
+type						= internal/cpu
+interval					= 1
+
+label						= %percentage%%
+
+format						= <label>
+format-padding				= ${variables.module-padding}
+format-overline				= ${variables.line-color}
+format-underline		 	= ${variables.line-color}
+format-background			= ${colors.background-light}
+format-foreground			= ${colors.foreground-primary}
+
+format-prefix				= CPU
+format-prefix-padding-right = ${variables.module-token-padding}
+format-suffix-padding-left	= ${variables.module-token-padding}
+
+# ----------------------------------------------------------------------
+#                         module/keyboard
+# ----------------------------------------------------------------------
+
+[module/keyboard]
+type						= internal/xkeyboard
+interval					= 1
+
+layout-icon-0				= ru;RU
+layout-icon-1				= us;US
+
+label-layout				= %icon%
+
+format						= <label-layout>
+format-padding				= ${variables.module-padding}
+format-overline				= ${variables.line-color}
+format-underline			= ${variables.line-color}
+format-background			= ${colors.background-light}
+format-foreground			= ${colors.foreground-primary}
+
+format-prefix				= KBD
+format-prefix-padding-right = ${variables.module-token-padding}
+format-suffix-padding-left	= ${variables.module-token-padding}
+
+# ----------------------------------------------------------------------
+#                         module/audio
+# ----------------------------------------------------------------------
+
+[module/audio]
+type						= internal/pulseaudio
+interval					= 5
+
+sink						=
+use-ui-max					= false
+
+label-volume				= %percentage%%
+label-muted					= OFF
+
+format-volume				= <label-volume>
+format-volume-padding		= ${variables.module-padding}
+format-volume-overline		= ${variables.line-color}
+format-volume-underline		= ${variables.line-color}
+format-volume-background	= ${colors.background-light}
+format-volume-foreground	= ${colors.foreground-primary}
+
+format-muted				= <label-muted>
+format-muted-padding		= ${variables.module-padding}
+format-muted-overline		= ${variables.line-color}
+format-muted-underline		= ${variables.line-color}
+format-muted-background		= ${colors.yellow-dark}
+format-muted-foreground		= ${colors.background-primary}
+
+format-volume-prefix		= VOL
+format-muted-prefix		    = VOL
+
+format-muted-prefix-padding-right  = ${variables.module-token-padding}
+format-volume-prefix-padding-right = ${variables.module-token-padding}
+
+# ----------------------------------------------------------------------
+#                         module/mpd
+# ----------------------------------------------------------------------
+
+[module/mpd]
+type						= internal/mpd
+interval					= 1
+
+host						= 127.0.0.1
+port						= 6600
+
+label-song					= %artist% - %title%
+
+format-online				= <label-song>
+format-online-padding		= ${variables.module-padding}
+format-online-overline		= ${variables.line-color}
+format-online-underline		= ${variables.line-color}
+
+format-playing-background	= ${colors.cyan-dark}
+format-playing-foreground	= ${colors.background-primary}
+
+format-paused-background	= ${colors.background-light}
+format-paused-foreground	= ${colors.background-primary}
+
+format-stopped				= MPD IS STOPPED
+format-stopped-background	= ${colors.background-light}
+format-stopped-foreground	= ${colors.background-primary}
+
+format-offline 				= MPD IS OFFLINE
+format-offline-padding		= ${variables.module-padding}
+format-offline-overline		= ${variables.line-color}
+format-offline-underline	= ${variables.line-color}
+format-offline-background	= ${colors.yellow-dark}
+format-offline-foreground	= ${colors.background-primary}
 
