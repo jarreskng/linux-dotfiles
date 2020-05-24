@@ -1,16 +1,20 @@
-# [ shadow ]
-shadow = true;
-no-dock-shadow = true;
-shadow-radius = 12;
-shadow-offset-x = -10;
-shadow-offset-y = -10;
-shadow-opacity = 0.75;
-shadow-red = 0.0;
-shadow-green = 0.0;
-shadow-blue = 0.0;
-shadow-exclude = [
-    "name = 'Notification'",    
-    "class_g = 'conky'",
+# -*- mode: conf; -*-
+
+#-----------------------------------------------------------------------
+#                               shadows
+#-----------------------------------------------------------------------
+
+shadow                          = true;
+no-dock-shadow                  = true;
+shadow-radius                   = 12;
+shadow-offset-x                 = -10;
+shadow-offset-y                 = -10;
+shadow-opacity                  = 0.75;
+shadow-red                      = 0.0;
+shadow-green                    = 0.0;
+shadow-blue                     = 0.0;
+shadow-exclude                  = [
+    "name = 'Notification'",
     "class_g = 'feh'",
     "class_g = 'i3-frame'",
     "class_g = 'polybar'",
@@ -18,17 +22,24 @@ shadow-exclude = [
     "_GTK_FRAME_EXTENTS@:c"
 ];
 
-# [ fading ]
-fading = true;
-fade-delta = 4;
-fade-in-step = 0.3;
-fade-out-step = 0.3;
-fade-exclude = [ ];
+#-----------------------------------------------------------------------
+#                               fading
+#-----------------------------------------------------------------------
 
-# [ other ]
-detect-rounded-corners = true;
-detect-client-opacity = true;
-refresh-rate = 0;
-vsync = "none";
-dbe = false;
-paint-on-overlay = true;
+fading                          = true;
+fade-delta                      = 4;
+fade-in-step                    = 0.3;
+fade-out-step                   = 0.3;
+fade-exclude                    = [ ];
+
+#-----------------------------------------------------------------------
+#                               various
+#-----------------------------------------------------------------------
+
+detect-rounded-corners          = true;
+detect-client-opacity           = true;
+refresh-rate                    = 0;
+dbe                             = false;
+paint-on-overlay                = true;
+vsync                           = "none";
+
