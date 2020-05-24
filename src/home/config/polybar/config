@@ -104,7 +104,7 @@ font-4                      = ${fonts.font-4}
 
 modules-left                = i3
 modules-center              = mpd
-modules-right               = keyboard cpu ram audio date
+modules-right               = mail keyboard audio date
 
 # ----------------------------------------------------------------------
 #                         module/i3
@@ -319,4 +319,22 @@ format-offline-overline     = ${variables.line-color}
 format-offline-underline    = ${variables.line-color}
 format-offline-background   = ${colors.yellow-dark}
 format-offline-foreground   = ${colors.background-primary}
+
+[module/mail]
+type						= custom/script
+interval 					= 5
+exec 						= modules/notmuch-count tag:unread and tag:gmail
+
+label 						= %output%
+
+format                      = <label>
+format-padding              = ${variables.module-padding}
+format-overline             = ${variables.line-color}
+format-underline            = ${variables.line-color}
+format-background           = ${colors.yellow-dark}
+format-foreground           = ${colors.background-primary}
+
+format-prefix               = MAIL
+format-prefix-padding-right = ${variables.module-token-padding}
+format-suffix-padding-left  = ${variables.module-token-padding}
 
