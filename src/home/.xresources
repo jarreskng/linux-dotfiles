@@ -1,73 +1,7 @@
 ! -*- mode: conf-xdefaults -*-
 
-!-----------------------------------------------------------------------
-!                         xft settings
-!-----------------------------------------------------------------------
-
-Xft.dpi:		96
-Xft.autohint:		0
-Xft.antialias:		true
-Xft.rgba:		rgb
-Xft.hinting:		true
-Xft.lcdfilter:		lcddefault
-Xft.hintstyle:		hintsfull
-
-!-----------------------------------------------------------------------
-!                         urxvt settings
-!-----------------------------------------------------------------------
-
-
-
-URxvt.font:		xft:JetBrains Mono Medium:size=10,xft:Symbols Nerd Font:style=1000-em
-URxvt.boldFont:  	xft:JetBrains Mono Medium:size=10
-URxvt.italicFont:  	xft:JetBrains Mono Medium:size=10
-URxvt.boldItalicfont:  	xft:JetBrains Mono Medium:size=10
-
-URxvt.letterSpace: 	-1
-URxvt.lineSpace: 	0
-URxvt.depth: 		24
-URxvt.iso14755: 	false
-URxvt.internalBorder:  	12
-URxvt.scrollBar: 	false
-
-!-----------------------------------------------------------------------
-!                         colors scheme
-!-----------------------------------------------------------------------
-
-! special
-*.foreground:		#C0C5CE
-*.background:   	#1B2B34
-*.cursorColor:  	#C0C5CE
-
-! black
-*.color0:		#1B2B34
-*.color8:       	#2F4451
-
-! red
-*.color1:		#C16069
-*.color9:       	#C16069
-
-! green
-*.color2:		#B4BE82
-*.color10:      	#C0CA8E
-
-! yellow
-*.color3:		#ECCC87
-*.color11:      	#ECCC87
-
-! blue
-*.color4:		#84A0C6
-*.color12:      	#91ACD1
-
-! magenta
-*.color5:		#A093C7
-*.color13:      	#ADA0D3
-
-! cyan
-*.color6:		#5f8787
-*.color14:      	#89B8C2
-
-! white
-*.color7:		#E1E1E1
-*.color15:      	#C0C5CE
-
+#include    "config/xresources/00-variables.conf"
+#include    "config/xresources/01-colors.conf"
+#include    "config/xresources/02-freetype.conf"
+#include    "config/xresources/03-urxvt.conf"
+#include    "config/xresources/05-rofi.conf"
