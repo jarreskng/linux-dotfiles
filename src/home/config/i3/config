@@ -97,6 +97,11 @@ bindcode $mod+Shift+17 move container to workspace $ws_08
 bindcode $mod+Shift+18 move container to workspace $ws_09
 bindcode $mod+Shift+19 move container to workspace $ws_10
 
+bindcode 172 exec --no-startup-id mpc toggle
+bindcode 121 exec --no-startup-id pactl set-sink-mute 0 toggle
+bindcode 122 exec --no-startup-id pactl set-sink-volume 0 -5%
+bindcode 123 exec --no-startup-id pactl set-sink-volume 0 +5%
+
 mode "resize-mode" {
      bindcode 56 resize shrink width  10 px
      bindcode 41 resize grow   width  10 px
