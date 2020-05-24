@@ -1,17 +1,52 @@
 # -*- mode: conf-xdefaults -*-
 
 !-----------------------------------------------------------------------
-!                         settings
+!                               settings
 !-----------------------------------------------------------------------
 
-rofi.font:		JetBrains Mono Medium 11
-rofi.combi-modi:	window,drun,ssh
-rofi.theme:		config/rofi/theme
+rofi.modi:                      window,run
+rofi.combi-modi:                window,drun
+rofi.width:                     600
+rofi.padding:                   8
+rofi.bw:                        1
+rofi.eh:                        1
+rofi.lines:                     8
+rofi.columns:                   1
+rofi.line-margin:               2
+rofi.line-padding:              3
+rofi.hide-scrollbar:            true
+rofi.separator-style:           solid
+rofi.sort:                      true
+rofi.sorting-method:            fzf
+rofi.matching:                  fuzzy
+rofi.scroll-method:             1
+rofi.disable-history:           true
+rofi.terminal:                  termite
 
 !-----------------------------------------------------------------------
-!                         bindings
+!                           bindings
 !-----------------------------------------------------------------------
 
-rofi.kb-mode-next:      Alt+Right
-rofi.kb-mode-previous:  Alt+Left
-rofi.kb-accept-custom:  Alt+Return
+rofi.kb-primary-paste:          Control+y
+rofi.kb-secondary-paste:        Shift+Insert
+rofi.kb-clear-line:             Control+k
+rofi.kb-move-front:             Control+a
+rofi.kb-move-end:               Control+e
+rofi.kb-move-word-back:         Alt+b
+rofi.kb-move-word-forward:      Alt+f
+rofi.kb-move-char-back:         Control+b
+rofi.kb-move-char-forward:      Control+f
+rofi.kb-remove-word-back:       Shift+BackSpace
+rofi.kb-remove-word-forward:    Alt+d
+rofi.kb-remove-char-forward:    Control+d
+rofi.kb-remove-char-back:       BackSpace
+rofi.kb-remove-to-eol:
+rofi.kb-remove-to-sol:
+rofi.kb-row-up:                 Control+p
+rofi.kb-row-down:               Control+n
+rofi.kb-mode-next:              Control+Tab
+rofi.kb-mode-previous:          Alt+Tab
+rofi.kb-accept-entry:           Return
+rofi.kb-accept-custom:          Control+Return
+rofi.kb-cancel:                 Control+g,Escape
+
