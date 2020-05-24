@@ -321,11 +321,11 @@ format-offline-background   = ${colors.yellow-dark}
 format-offline-foreground   = ${colors.background-primary}
 
 [module/mail]
-type						= custom/script
-interval 					= 5
-exec 						= modules/notmuch-count tag:unread and tag:gmail
+type                        = custom/script
+interval                    = 5
+exec                        = modules/notmuch-count tag:unread and tag:gmail
 
-label 						= %output%
+label                       = %output%
 
 format                      = <label>
 format-padding              = ${variables.module-padding}
