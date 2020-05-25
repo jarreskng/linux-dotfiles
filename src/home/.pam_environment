@@ -12,9 +12,10 @@ XDG_CACHE_HOME                  DEFAULT="/tmp/user/@{PAM_USER}/cache"
 #                               default applications
 #-----------------------------------------------------------------------
 
-EDITOR                          DEFAULT="emacsclient"
+TERMINAL			DEFAULT="urxvt"
 PAGER                           DEFAULT="less"
 BROWSER                         DEFAULT="chromium"
+EDITOR                          DEFAULT="emacsclient"
 
 #-----------------------------------------------------------------------
 #                               zsh workaround
@@ -23,29 +24,56 @@ BROWSER                         DEFAULT="chromium"
 ZDOTDIR                         DEFAULT="${XDG_CONFIG_HOME}/zsh"
 
 #-----------------------------------------------------------------------
+#                               custom options
+#-----------------------------------------------------------------------
+
+PATH                            DEFAULT="${PATH}:@{HOME}/bin"
+PASSWORD_STORE_DIR              DEFAULT="@{HOME}/passwords"
+MAILBOX_STORE_DIR               DEFAULT="@{HOME}/mailbox"
+SKYPE_STORE_DIR                 DEFAULT="${XDG_DATA_HOME}/skype"
+
+#-----------------------------------------------------------------------
 #                               xdg compatibility
 #-----------------------------------------------------------------------
 
-PATH                            DEFAULT="${PATH}:@{HOME}/bin:@{HOME}.dotnet/tools"
-PASSWORD_STORE_DIR              DEFAULT="@{HOME}/passwords"
-MAILBOX_STORE_DIR               DEFAULT="@{HOME}/mailbox"
+DOCKER_CONFIG                   DEFAULT="${XDG_CONFIG_HOME}/docker"
 ANSIBLE_CONFIG                  DEFAULT="${XDG_CONFIG_HOME}/ansible/config"
 GNUPGHOME                       DEFAULT="${XDG_CONFIG_HOME}/gnupg"
 NOTMUCH_CONFIG                  DEFAULT="${XDG_CONFIG_HOME}/notmuch/config"
-WGETRC                          DEFAULT="${XDG_CONFIG_HOME}/wget/config"
 LESSKEY                         DEFAULT="${XDG_CONFIG_HOME}/less/lesskey"
-DOCKER_CONFIG                   DEFAULT="${XDG_CONFIG_HOME}/docker"
-NPM_CONFIG_USERCONFIG           DEFAULT="${XDG_CONFIG_HOME}/npm/npmrc"
-NVM_DIR                         DEFAULT="${XDG_CONFIG_HOME}/nvm"
-WEBIDE_PROPERTIES               DEFAULT="${XDG_CONFIG_HOME}/jetbrains/webstorm.properties"
-WEBIDE_VM_OPTIONS               DEFAULT="${XDG_CONFIG_HOME}/jetbrains/webstorm.vmoptions"
-RIDER_PROPERTIES                DEFAULT="${XDG_CONFIG_HOME}/jetbrains/rider.properties"
-RIDER_VM_OPTIONS                DEFAULT="${XDG_CONFIG_HOME}/jetbrains/rider.vmoptions"
-NUGET_PACKAGES                  DEFAULT="${XDG_DATA_HOME}/nuget/packages"
-SKYPE_STORE_DIR                 DEFAULT="${XDG_DATA_HOME}/skype"
 LESSHISTFILE                    DEFAULT="${XDG_DATA_HOME}/less/history"
+NVM_DIR                         DEFAULT="${XDG_CONFIG_HOME}/nvm"
+NPM_CONFIG_USERCONFIG           DEFAULT="${XDG_CONFIG_HOME}/npm/npmrc"
+NUGET_PACKAGES                  DEFAULT="${XDG_DATA_HOME}/nuget/packages"
+WGETRC                          DEFAULT="${XDG_CONFIG_HOME}/wget/config"
 WINEPREFIX                      DEFAULT="${XDG_DATA_HOME}/wine"
+
+#-----------------------------------------------------------------------
+#                               jetbrains options
+#-----------------------------------------------------------------------
+
+RIDER_PROPERTIES                DEFAULT="${XDG_CONFIG_HOME}/jetbrains/rider.properties"
+WEBIDE_PROPERTIES               DEFAULT="${XDG_CONFIG_HOME}/jetbrains/webstorm.properties"
+RIDER_VM_OPTIONS                DEFAULT="${XDG_CONFIG_HOME}/jetbrains/rider.vmoptions"
+WEBIDE_VM_OPTIONS               DEFAULT="${XDG_CONFIG_HOME}/jetbrains/webstorm.vmoptions"
+
+#-----------------------------------------------------------------------
+#                               nodejs options
+#-----------------------------------------------------------------------
+
 NODE_OPTIONS                    DEFAULT="--max_old_space_size=8192"
+
+#-----------------------------------------------------------------------
+#                               dotnet options
+#-----------------------------------------------------------------------
+
+PATH                            DEFAULT="${PATH}:@{HOME}/.dotnet/tools"
 MSBuildSDKsPath                 DEFAULT="/opt/dotnet/sdk/$(dotnet --version)/Sdks"
+
+#-----------------------------------------------------------------------
+#                               java options
+#-----------------------------------------------------------------------
+
 _JAVA_AWT_WM_NONREPARENTING     DEFAULT="1"
 _JAVA_OPTIONS                   DEFAULT="-Duser.share=@{HOME}/share -Djava.util.prefs.userRoot=@{HOME}/share/java"
+
