@@ -323,7 +323,7 @@ format-offline-foreground       = ${colors.background-primary}
 [module/mail]
 type                            = custom/script
 interval                        = 5
-exec                            = modules/notmuch-count tag:unread and tag:gmail
+exec                            = ~/config/polybar/modules/notmuch-count tag:unread and tag:gmail
 
 label                           = %output%
 
