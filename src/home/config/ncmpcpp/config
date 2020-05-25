@@ -219,7 +219,7 @@ browser_playlist_prefix             = "$4[playlist]$9 "
 modified_item_prefix                = "$3[modified]$9"
 
 current_item_prefix                 = "$r"
-current_item_suffix                 = "$/r$(end)"
+current_item_suffix                 = "$/r"
 
 selected_item_prefix                = "$6"
 selected_item_suffix                = "$9"
@@ -240,5 +240,5 @@ current_item_inactive_column_suffix = "$/r$(end)"
 #                               columns
 # ----------------------------------------------------------------------
 
-song_columns_list_format = (10f)[cyan]{NE:Track} (30)[cyan]{a:Artist} (30)[white]{t|f:Title} (30)[cyan]{b:Album} (10f)[cyan]{lr:Time}
+song_columns_list_format = (10f)[cyan]{NE:Track} (30)[cyan]{a:Artist} (30)[cyan]{t|f:Title} (30)[cyan]{b:Album} (10f)[cyan]{lr:Time}
 
