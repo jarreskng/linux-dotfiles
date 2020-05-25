@@ -43,12 +43,16 @@ workspace $ws_10 output $output_02
 # -*- mode: conf -*-
 
 # ----------------------------------------------------------------------
-#                       bindings section
+#                       variables
 # ----------------------------------------------------------------------
 
 set $browser  chromium
-set $terminal termite
+set $terminal urxvt
 set $launcher rofi -show run -cache-dir=${XDG_DATA_DIR}/rofi
+
+# ----------------------------------------------------------------------
+#                       bindings section
+# ----------------------------------------------------------------------
 
 bindcode $mod+Shift+24 kill
 
