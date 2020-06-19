@@ -15,5 +15,7 @@
 (require 'config-packages)
 (require 'config-theme)
 (require 'config-mode)
+(require 'config-ks-mode)
 (require 'config-notmuch)
 
+(put 'upcase-region 'disabled nil)
