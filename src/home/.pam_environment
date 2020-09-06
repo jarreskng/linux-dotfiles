@@ -27,10 +27,10 @@ ZDOTDIR                         DEFAULT="${XDG_CONFIG_HOME}/zsh"
 #                               custom options
 #-----------------------------------------------------------------------
 
-PATH                            DEFAULT="${PATH}:@{HOME}/bin"
-PASSWORD_STORE_DIR              DEFAULT="@{HOME}/passwords"
-MAILBOX_STORE_DIR               DEFAULT="@{HOME}/mailbox"
+PATH                            DEFAULT="${PATH}:@{XDG_CONFIG_HOME}/bin"
 SKYPE_STORE_DIR                 DEFAULT="${XDG_DATA_HOME}/skype"
+MAILBOX_STORE_DIR               DEFAULT="${XDG_CONFIG_HOME}/mailbox"
+PASSWORD_STORE_DIR              DEFAULT="${XDG_CONFIG_HOME}/passwords"
 
 #-----------------------------------------------------------------------
 #                               xdg compatibility
@@ -67,8 +67,15 @@ NODE_OPTIONS                    DEFAULT="--max_old_space_size=8192"
 #                               dotnet options
 #-----------------------------------------------------------------------
 
-PATH                            DEFAULT="${PATH}:@{HOME}/.dotnet/tools"
+PATH                            DEFAULT="${PATH}:${XDG_CONFIG_HOME}/.dotnet/tools"
 MSBuildSDKsPath                 DEFAULT="/opt/dotnet/sdk/$(dotnet --version)/Sdks"
+
+#-----------------------------------------------------------------------
+#                               python options
+#-----------------------------------------------------------------------
+
+PYTHONUSERBASE			DEFAULT="${XDG_DATA_HOME}/python"
+PATH                            DEFAULT="${PATH}:${XDG_DATA_HOME}/python/bin"
 
 #-----------------------------------------------------------------------
 #                               java options
