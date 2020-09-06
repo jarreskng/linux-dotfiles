@@ -178,7 +178,7 @@ for_window [class="(?i)skype"]    floating disable
 
 for_window [instance="scratch"]   move scratchpad
 
-assign	   [class="(?i)chromium"] workspace $ws_02
+assign	   [class="(?i)firefox"]  workspace $ws_02
 assign 	   [class="(?i)skype"]    workspace $ws_08
 assign 	   [class="(?i)telegram"] workspace $ws_08
 
