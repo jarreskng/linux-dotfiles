@@ -97,10 +97,3 @@ alias ls="ls --color --human-readable --group-directories-first"
 alias df="df --human-readable --exclude-type=tmpfs"
 alias du="du --human-readable --total --max-depth=1 | sort --human-numeric-sort"
 
-#-----------------------------------------------------------------------
-#                         external tools
-#-----------------------------------------------------------------------
-
-source /usr/share/nvm/nvm.sh
-source /usr/share/nvm/install-nvm-exec
-

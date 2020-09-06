@@ -104,7 +104,7 @@ font-4                          = ${fonts.font-4}
 
 modules-left                    = i3
 modules-center                  = mpd
-modules-right                   = mail keyboard audio date
+modules-right                   = keyboard audio date
 
 # ----------------------------------------------------------------------
 #                               module/i3

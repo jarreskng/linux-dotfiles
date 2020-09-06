@@ -46,7 +46,7 @@ workspace $ws_10 output $output_02
 #                       variables
 # ----------------------------------------------------------------------
 
-set $browser  chromium
+set $browser  firefox
 set $terminal urxvt
 set $launcher rofi -show run -cache-dir=${XDG_DATA_DIR}/rofi
 
