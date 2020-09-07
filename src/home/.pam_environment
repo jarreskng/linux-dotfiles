@@ -27,7 +27,7 @@ ZDOTDIR                         DEFAULT="${XDG_CONFIG_HOME}/zsh"
 #                               custom options
 #-----------------------------------------------------------------------
 
-PATH                            DEFAULT="${PATH}:@{XDG_CONFIG_HOME}/bin"
+PATH                            DEFAULT="${PATH}:@{HOME}/bin"
 SKYPE_STORE_DIR                 DEFAULT="${XDG_DATA_HOME}/skype"
 MAILBOX_STORE_DIR               DEFAULT="${XDG_DATA_HOME}/mailbox"
 PASSWORD_STORE_DIR              DEFAULT="${XDG_DATA_HOME}/passwords"
