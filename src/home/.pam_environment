@@ -14,7 +14,7 @@ XDG_CACHE_HOME                  DEFAULT="/tmp/user/@{PAM_USER}/cache"
 
 TERMINAL			DEFAULT="urxvt"
 PAGER                           DEFAULT="less"
-BROWSER                         DEFAULT="chromium"
+BROWSER                         DEFAULT="firefox"
 EDITOR                          DEFAULT="emacsclient"
 
 #-----------------------------------------------------------------------
